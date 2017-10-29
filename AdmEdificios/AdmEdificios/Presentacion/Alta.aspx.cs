@@ -15,7 +15,7 @@ namespace AdmEdificios.Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 calNuevaTareaFecha.SelectedDate = DateTime.Now.Date; // Selecciona el dia de hoy en el calendario.
                 ddlBarrioCABA.DataSource = barrioServicio.ListarBarrios();

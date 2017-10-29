@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Presentacion\Alta.aspx" />
+    <Content Include="Presentacion\Baja.aspx" />
     <Content Include="Presentacion\Home.aspx" />
     <Content Include="Presentacion\Login.Master" />
     <Content Include="Presentacion\Home.Master" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Presentacion\Alta.aspx.designer.cs">
       <DependentUpon>Alta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Baja.aspx.cs">
+      <DependentUpon>Baja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Baja.aspx.designer.cs">
+      <DependentUpon>Baja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

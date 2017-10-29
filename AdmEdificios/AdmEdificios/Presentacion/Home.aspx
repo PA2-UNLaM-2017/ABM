@@ -45,15 +45,9 @@
                             <asp:TemplateField HeaderText="Eliminar" ShowHeader="False">
                                  <ItemTemplate>
 
-
-                                   <%--   <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
+                                   <%--  <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
                                     <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
-                                    </a> --%>
-
-
-                                    <%-- <asp:Button ID="btnEliminar" class="btn btn-outline btn-success btn-sm" runat="server" CausesValidation="false" CommandName="Delete"
-                                        Text="E" /> OnClick="btnEliminar_Click" />--%>
-
+                                    </a> --%> 
 
                                 </ItemTemplate> 
                             </asp:TemplateField>
