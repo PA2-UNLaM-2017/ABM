@@ -15,10 +15,10 @@ namespace AdmEdificios.Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR 
 
-           /* if (!String.IsNullOrEmpty(Request.QueryString["id"]))
+            if (!String.IsNullOrEmpty(Request.QueryString["id"]))
             {
 
                 int idEdi = Int32.Parse(Request.QueryString["id"]);
@@ -27,16 +27,18 @@ namespace AdmEdificios.Presentacion
 
                 CargaEdificio(edificio);
 
-            }*/
+                
+
+            }
 
         }
 
 
-        /*public void CargaEdificio(Edificios edificio)
+        public void CargaEdificio(Edificios edificio)
         {
 
-            //lblDatosEdificio.Text = edificio.Nombre;
+            lblDatosEdificio.Text = edificio.Nombre;
 
-        }*/
+        }
     }
 }
