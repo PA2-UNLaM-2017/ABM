@@ -10,13 +10,12 @@ namespace AdmEdificios.Presentacion
 {
     public partial class Alta : System.Web.UI.Page
     {
-
         BarrioServicio barrioServicio = new BarrioServicio();
         EdificioServicio edificioServicio = new EdificioServicio();
 
         protected void Page_Load(object sender, EventArgs e)
-        {            
-           if (!IsPostBack)
+        {
+            if (!IsPostBack)
             {
                 calNuevaTareaFecha.SelectedDate = DateTime.Now.Date; // Selecciona el dia de hoy en el calendario.
                 ddlBarrioCABA.DataSource = barrioServicio.ListarBarrios();
@@ -76,8 +75,5 @@ namespace AdmEdificios.Presentacion
                 lblError.Text = "La fecha tienen que ser mayor o igual al dia de hoy";
             }
         }*/
-
-
-
     }
 }
