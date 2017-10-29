@@ -11,36 +11,65 @@ namespace AdmEdificios.Datos
         AdmEdificiosEntities context = new AdmEdificiosEntities();
 
 
-
+        // GUARDA EL EDIFICIO CREADO EN EL ALTA
         public void CrearEdificio(Edificios edificio)
         {
 
             context.Edificios.Add(edificio);
             context.SaveChanges();
-        
+
         }
 
 
-
-
-
-        /*CAPTasksEntities context = new CAPTasksEntities();
-        public void CrearTarea(int idUsuario, string nombre, string descripcion, int idCarpeta, DateTime fechaFin, int prioridad)
+        // LISTA TODOS LOS EIDIFICIOS DE LA BASE DE DATOS
+        public List<Edificios> ListarEdificios()
         {
-            Tareas miTarea = new Tareas();
-            miTarea.IdUsuario = idUsuario;
-            miTarea.Nombre = nombre;
-            miTarea.Descripcion = descripcion;
-            miTarea.FechaFin = fechaFin;
-            miTarea.IdCarpeta = idCarpeta;
-            miTarea.Prioridad = Convert.ToInt16(prioridad);
-            miTarea.Estado = 1;
-            context.Tareas.AddObject(miTarea);
+
+            var edificios = context.Edificios.ToList();
+
+            return edificios;
+
+        }
+
+
+        // BUSCAR UN EDIFICIO EN PARTICULAR
+        public Edificios BuscarEdificio(int idEdificio)
+        {
+
+            Edificios edificio = context.Edificios.Single(e => e.IdEdificio == idEdificio);
+
+            /*var edificio = (from e in context.Edificios
+                             where e.IdEdificio == idEdificio
+                            select e).Single();*/
+
+            return edificio;
+
+        }
+
+
+        /* MODIFICAR
+        public void ModificarTarea(int idTarea, int idCarpeta, string nombre, string descripcion, DateTime fechaFin, int prioridad)
+        {
+            Tareas tarea = context.Tareas.Where(e => e.IdTarea == idTarea).FirstOrDefault();
+            tarea.IdCarpeta = idCarpeta;
+            tarea.Nombre = nombre;
+            tarea.Descripcion = descripcion;
+            tarea.FechaFin = fechaFin;
+            tarea.Prioridad = Convert.ToInt16(prioridad);
+            context.SaveChanges();
+        } */
+
+
+        /* ELIMINAR
+        public void EliminarTarea(int idTarea)
+        {
+            var baja = (from e in context.Tareas
+                        where e.IdTarea == idTarea
+                        select e).Single();
+
+            context.Tareas.DeleteObject(baja);
             context.SaveChanges();
         }*/
-
-
-
 
     }
 }

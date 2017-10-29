@@ -17,5 +17,29 @@ namespace AdmEdificios.Negocio
             ed.CrearEdificio(edificio);
         }
 
+
+        // VA A BUSCAR TODOS LOS EDIFICIOS DE LA BASE DE DATOS
+        public List<Edificios> ListarEdificios()
+        {
+            return ed.ListarEdificios();
+        }
+
+
+        public Edificios BuscarEdificio(int idEdificio)
+        {
+
+            return ed.BuscarEdificio(idEdificio);
+
+        }
+
+
+        /* public void EliminarEdificio(int idEdificio)
+         { 
+            
+        
+        
+        
+         }*/
+
     }
 }

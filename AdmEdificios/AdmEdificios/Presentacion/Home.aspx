@@ -10,8 +10,6 @@
             <asp:TextBox class="form-control" runat="server" ID="txtBuscaBarrio" placeholder="Ingrese barrio" />
             <br />
             <asp:TextBox class="form-control" runat="server" ID="txtBuscaAnioCreacion" placeholder="Ingrese año de creación" />
-           <%-- <asp:BulletedList ID="bullCarpetas" CssClass="nav" DisplayMode="LinkButton" runat="server" OnClick="bullCarpetas_Click">
-            </asp:BulletedList> --%>
             <br />
             <a class="btn btn-primary fa-with-txt">&#xf002; Buscar</a>
         </div>
@@ -21,30 +19,49 @@
             <div class="panel-body">
                 <div class="table-responsive">
                     <%-- VA A IR LA LISTA ACA --%>
-                    <%--<asp:GridView ID="gvListaTareas" CssClass="table table-hover table-striped" runat="server" AutoGenerateColumns="False"
-                        ForeColor="#333333" GridLines="None" CellPadding="10" CellSpacing="4" DataKeyNames="IdTarea"
-                        OnRowDataBound="gvListaTareas_RowDataBound">
+                    
+                    <asp:GridView ID="gvListaEdificios" CssClass="table table-hover table-striped" runat="server" AutoGenerateColumns="False"
+                        ForeColor="#333333" GridLines="None" CellPadding="10" CellSpacing="4" DataKeyNames="IdEdificio">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:BoundField DataField="IdTarea" HeaderText="IdTarea" Visible="False" />
-                            <asp:BoundField DataField="Fecha" DataFormatString="{0:d}" HeaderText="Fecha" ReadOnly="True" />
-                            <asp:BoundField DataField="Tarea" HeaderText="Nombre" ReadOnly="True" />
-                            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" ReadOnly="True" />
-                            <asp:BoundField DataField="Prioridad" HeaderText="Prioridad" ReadOnly="True" />
-                            <asp:BoundField DataField="Carpeta" HeaderText="Carpeta" ReadOnly="True" />
-                            <asp:BoundField DataField="Estado" HeaderText="Estado" />
-                            <asp:TemplateField HeaderText="Accion" ShowHeader="False">
-                                <ItemTemplate>
+                            <asp:BoundField DataField="IdEdificio" HeaderText="IdEdificio" Visible="False" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" />
+                            <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" />
+                            <asp:BoundField DataField="IdBarrioCABA" HeaderText="Barrio CABA" ReadOnly="True" />
+                            <asp:BoundField DataField="CodPostal" HeaderText="Cod. Postal" ReadOnly="True" />
+                            <asp:BoundField DataField="CantPisos" HeaderText="Cant. Pisos" ReadOnly="True" />
+                            <asp:BoundField DataField="CantDptos" HeaderText="Cant. Dptos" ReadOnly="True" />
+                            <asp:BoundField DataField="CantCocheras" HeaderText="Cant. Cocheras" ReadOnly="True" />
+                            <asp:BoundField DataField="AnioCreacion" HeaderText="Año Creación" ReadOnly="True" />
+                            <asp:BoundField DataField="Amenities" HeaderText="Amenities" ReadOnly="True" />
+                            <asp:BoundField DataField="FechaAlta" DataFormatString="{0:d}" HeaderText="Fecha Alta" ReadOnly="True" />                         
+                            <asp:BoundField DataField="Comentarios" HeaderText="Comentarios" ReadOnly="True" />
+                            <asp:TemplateField HeaderText="Modificar" ShowHeader="False">
+                               <ItemTemplate>
                                     <asp:Button ID="btnModificar" class="btn btn-outline btn-success btn-sm" runat="server" CausesValidation="false" CommandName="Update"
-                                        Text="Modif" OnClick="btnCompletar_Click" />
-                                </ItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Button ID="btnEliminar" class="btn btn-outline btn-success btn-sm" runat="server" CausesValidation="false" CommandName="Update"
-                                        Text="Eliminar" OnClick="btnCompletar_Click" />
-                                </ItemTemplate>
+                                        Text="Modif" /><%--  OnClick="btnModificar_Click" /> --%>
+                                </ItemTemplate> 
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Eliminar" ShowHeader="False">
+                                 <ItemTemplate>
+
+
+                                     <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
+                                    <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+
+
+                                    <%-- <asp:Button ID="btnEliminar" class="btn btn-outline btn-success btn-sm" runat="server" CausesValidation="false" CommandName="Delete"
+                                        Text="E" /> OnClick="btnEliminar_Click" />--%>
+
+
+                                </ItemTemplate> 
                             </asp:TemplateField>
                         </Columns>
-                    </asp:GridView> --%>
+                    </asp:GridView>
+
+
+
                 </div>
                 <!-- /.table-responsive -->
             </div>
