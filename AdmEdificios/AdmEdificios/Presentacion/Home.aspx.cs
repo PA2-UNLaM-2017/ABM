@@ -36,20 +36,5 @@ namespace AdmEdificios.Presentacion
 
         }
 
-
-        /* protected void btnEliminar_Click(object sender, EventArgs e)
-         {
-             Button btn = (Button)sender;
-             GridViewRow row = (GridViewRow)btn.NamingContainer;
-
-             int idEdificio = int.Parse(gvListaEdificios.DataKeys[row.RowIndex].Value.ToString());
-
-             //NECESITO LLEVAR EL OBJETO A LA PAGINA DE ELIMINACION
-
-             es.BuscarEdificio(idEdificio);
-
-           //  CargaTablaEdificios();
-         }*/
-
     }
 }

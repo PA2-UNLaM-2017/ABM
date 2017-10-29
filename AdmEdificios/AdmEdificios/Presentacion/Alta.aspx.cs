@@ -51,29 +51,5 @@ namespace AdmEdificios.Presentacion
 
         }
 
-
-        /*protected void btnGuardarTarea_Click(object sender, EventArgs e)
-        {
-            Tarea tarea = new Tarea();
-
-            int idUsuario = Convert.ToInt32(Session["IdUsuario"]);
-            int id = Convert.ToInt32(ddlNuevaTareaIdCarpeta.SelectedValue);
-            tarea.IdCarpeta = id;
-            tarea.IdUsuario = idUsuario;
-            tarea.Nombre = txtNuevaTareaNombre.Text;
-            tarea.Descripcion = txtNuevaTareaDescripcion.Text;
-            tarea.Fecha = calNuevaTareaFecha.SelectedDate.Date;
-            tarea.Prioridad = Convert.ToInt16(ddlNuevaTareaPrioridad.SelectedValue);
-
-            if (tarea.Fecha >= DateTime.Now.Date)
-            {
-                tareaService.CrearNuevaTarea(tarea);
-                Response.Redirect("~/Presentacion/Home.aspx");
-            }
-            else
-            {
-                lblError.Text = "La fecha tienen que ser mayor o igual al dia de hoy";
-            }
-        }*/
     }
 }

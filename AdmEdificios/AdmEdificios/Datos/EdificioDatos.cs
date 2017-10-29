@@ -38,27 +38,9 @@ namespace AdmEdificios.Datos
 
             Edificios edificio = context.Edificios.Single(e => e.IdEdificio == idEdificio);
 
-            /*var edificio = (from e in context.Edificios
-                             where e.IdEdificio == idEdificio
-                            select e).Single();*/
-
             return edificio;
 
         }
-
-
-        /* MODIFICAR
-        public void ModificarTarea(int idTarea, int idCarpeta, string nombre, string descripcion, DateTime fechaFin, int prioridad)
-        {
-            Tareas tarea = context.Tareas.Where(e => e.IdTarea == idTarea).FirstOrDefault();
-            tarea.IdCarpeta = idCarpeta;
-            tarea.Nombre = nombre;
-            tarea.Descripcion = descripcion;
-            tarea.FechaFin = fechaFin;
-            tarea.Prioridad = Convert.ToInt16(prioridad);
-            context.SaveChanges();
-        } */
-
 
         // ELIMINAR EDIFICIO
         public void EliminarEdificio(int idEdificio)

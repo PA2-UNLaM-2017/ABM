@@ -15,7 +15,7 @@ namespace AdmEdificios.Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR 
+            //CARGA EL EDIFICIO QUE QUIERO ELIMINAR 
 
             if (!Page.IsPostBack)
             {
