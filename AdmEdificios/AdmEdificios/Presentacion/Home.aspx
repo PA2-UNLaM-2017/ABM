@@ -45,9 +45,9 @@
                             <asp:TemplateField HeaderText="Eliminar" ShowHeader="False">
                                  <ItemTemplate>
 
-                                   <%--  <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
+                                    <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
                                     <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
-                                    </a> --%> 
+                                    </a>
 
                                 </ItemTemplate> 
                             </asp:TemplateField>

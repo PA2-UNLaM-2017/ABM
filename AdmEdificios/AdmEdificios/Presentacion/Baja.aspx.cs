@@ -15,21 +15,22 @@ namespace AdmEdificios.Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR 
 
-            if (!String.IsNullOrEmpty(Request.QueryString["id"]))
+            if (!Page.IsPostBack)
             {
+                if (!String.IsNullOrEmpty(Request.QueryString["id"]))
+                {
 
-                int idEdi = Int32.Parse(Request.QueryString["id"]);
+                    int idEdi = Int32.Parse(Request.QueryString["id"]);
 
-                edificio = es.BuscarEdificio(idEdi);
+                    edificio = es.BuscarEdificio(idEdi);
 
-                CargaEdificio(edificio);
+                    CargaEdificio(edificio);
 
-                
-
+                }
+            
             }
+            //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR    
 
         }
 
