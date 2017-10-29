@@ -60,16 +60,16 @@ namespace AdmEdificios.Datos
         } */
 
 
-        /* ELIMINAR
-        public void EliminarTarea(int idTarea)
+        // ELIMINAR EDIFICIO
+        public void EliminarEdificio(int idEdificio)
         {
-            var baja = (from e in context.Tareas
-                        where e.IdTarea == idTarea
+            var baja = (from e in context.Edificios
+                        where e.IdEdificio == idEdificio
                         select e).Single();
 
-            context.Tareas.DeleteObject(baja);
+            context.Edificios.Remove(baja);
             context.SaveChanges();
-        }*/
+        }
 
     }
 }

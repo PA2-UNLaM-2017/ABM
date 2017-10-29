@@ -10,13 +10,14 @@
             <h3 class="page-header">
                 Baja de Edificio</h3>
             <div class="form-group">
-                <asp:Label ID="lblNombreEdificio" Text="Desea eliminar el siguiente edificio?:" runat="server" />
+                <asp:Label ID="lblDeseaEliminar" Text="Desea eliminar el siguiente edificio?: " runat="server" />
                 <asp:Label ID="lblDatosEdificio" Text="" runat="server" />
+                <asp:Label ID="lblGuardaIdEdificio" Text="" Visible="false" runat="server" />
             </div>
 
             <div class="form-group">
-                <asp:Button ID="btnGuardar" Text="Aceptar" runat="server" class="btn btn-success" />
-                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" />
+                <asp:Button ID="btnGuardar" Text="Aceptar" runat="server" class="btn btn-success" OnClick="btnGuardarBaja_Click" />
+                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" OnClick="btnCancelarBaja_Click" />
             </div>
         </div>
     </div>

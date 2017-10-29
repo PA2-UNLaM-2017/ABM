@@ -13,13 +13,13 @@ namespace AdmEdificios.Presentacion {
     public partial class Baja {
         
         /// <summary>
-        /// Control lblNombreEdificio.
+        /// Control lblDeseaEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreEdificio;
+        protected global::System.Web.UI.WebControls.Label lblDeseaEliminar;
         
         /// <summary>
         /// Control lblDatosEdificio.
@@ -29,6 +29,15 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDatosEdificio;
+        
+        /// <summary>
+        /// Control lblGuardaIdEdificio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGuardaIdEdificio;
         
         /// <summary>
         /// Control btnGuardar.

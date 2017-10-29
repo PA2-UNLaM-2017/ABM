@@ -33,13 +33,12 @@ namespace AdmEdificios.Negocio
         }
 
 
-        /* public void EliminarEdificio(int idEdificio)
+        public void EliminarEdificio(int idEdificio)
          { 
             
+            ed.EliminarEdificio(idEdificio);
         
-        
-        
-         }*/
+         }
 
     }
 }

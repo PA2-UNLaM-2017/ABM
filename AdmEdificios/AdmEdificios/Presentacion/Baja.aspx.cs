@@ -15,31 +15,43 @@ namespace AdmEdificios.Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR 
 
             if (!Page.IsPostBack)
             {
                 if (!String.IsNullOrEmpty(Request.QueryString["id"]))
                 {
 
-                    int idEdi = Int32.Parse(Request.QueryString["id"]);
+                    int idEdificio = Int32.Parse(Request.QueryString["id"]);
 
-                    edificio = es.BuscarEdificio(idEdi);
+                    edificio = es.BuscarEdificio(idEdificio);
 
                     CargaEdificio(edificio);
 
-                }
-            
-            }
-            //CARGAR EL EDIFICIO QUE QUIERO ELIMINAR    
-
+                }   
+            }   
         }
 
 
         public void CargaEdificio(Edificios edificio)
         {
 
-            lblDatosEdificio.Text = edificio.Nombre;
+            lblDatosEdificio.Text = edificio.Nombre + " situado en " + edificio.Direccion;
+            lblGuardaIdEdificio.Text = edificio.IdEdificio.ToString();
+        }
 
+        protected void btnGuardarBaja_Click(object sender, EventArgs e)
+        {
+
+            int idEdificio = Int32.Parse(lblGuardaIdEdificio.Text);
+            es.EliminarEdificio(idEdificio);
+            Response.Redirect("~/Presentacion/Home.aspx");
+
+        }
+
+        protected void btnCancelarBaja_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Presentacion/Home.aspx");
         }
     }
 }
