@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="AdmEdificios.Presentacion.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Administración de Edificios</title>
+    <!-- Core CSS - Include with every page -->
+    <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <link rel="Stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" media="all" />
+    <!-- SB Admin CSS - Include with every page -->
+    <link rel="Stylesheet" type="text/css" href="css/captasks.css" media="all" />
+    <link rel="shortcut icon" href="img/edificio-escalonado.png" />
+    <!-- Core Scripts - Include with every page -->
+    <script lang="javascript" type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script lang="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formGeneral" runat="server">
+    <div class='header container'>
+        <div class="col-md-6">
+            <h1 class="text-info">
+                Administración de Edificios
+            </h1>
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentLogin" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div id="pie" class="fixed-bottom">
+        <div class="modal-footer container">
+            <small class="text-muted">Copyright 2017 - Todos los derechos reservados</small>
+        </div>
+    </div>
+</body>
+</html>

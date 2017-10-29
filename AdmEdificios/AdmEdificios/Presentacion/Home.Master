@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="AdmEdificios.Presentacion.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Administración de Edificios</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Core CSS -->
+    <link rel="Stylesheet" type="text/css" media="all" href="css/bootstrap.min.css" />
+    <link rel="Stylesheet" type="text/css" media="all" href="font-awesome/css/font-awesome.css" />
+    <!-- SB Admin CSS  -->
+    <link rel="Stylesheet" type="text/css" media="all" href="css/captasks.css" />
+    <link rel="shortcut icon" href="img/edificio-escalonado.png" />
+    <!-- Core Scripts -->
+    <script lang="javascript" type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script lang="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="navbar navbar-fixed-top">
+        <div class='container'>
+            <div class="col-md-6">
+            <a class="navbar-brand" href="Home.aspx"><h4>
+                    Administración de Edificios
+                </h4></a>
+                
+            </div>
+            <div id="divSessionInfo" class="col-md-6 text-right">
+                Bienvenido,
+                <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                <asp:Button ID="btnSalir" runat="server" Text="&#xf08b; Salir" OnClick="btnSalir_Click" class="btn btn-default fa-with-txt btn-sm">
+                </asp:Button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div id="pie" class="fixed-bottom clearfix">
+        <div class="modal-footer container">
+            <small class="text-muted">Copyright 2017 - Todos los derechos reservados</small>
+        </div>
+    </div>
+</body>
+</html>
