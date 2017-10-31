@@ -69,27 +69,23 @@
                 
                 <asp:CheckBoxList ID="cblAmenities" runat="server">
 
-                    <asp:ListItem Value="value"
-                        Selected="True">
-                        Ninguno
-                    </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="SUM"
                         Selected="False">
                         SUM
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Parrilla"
                         Selected="False">
                         Parrilla
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Pileta"
                         Selected="False">
                         Pileta
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Gimnasio"
                         Selected="False">
                         Gimnasio
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Seguridad"
                         Selected="False">
                         Seguridad
                     </asp:ListItem>

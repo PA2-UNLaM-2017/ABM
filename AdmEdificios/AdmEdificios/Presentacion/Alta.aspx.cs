@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using AdmEdificios.Negocio;
+using System.Text;
 
 namespace AdmEdificios.Presentacion
 {
@@ -39,12 +40,36 @@ namespace AdmEdificios.Presentacion
             edificio.CantDptos = Convert.ToInt16(txtCantDptos.Text);
             edificio.CantCocheras = Convert.ToInt16(txtCocheras.Text);
             edificio.AnioCreacion = Convert.ToInt16(txtAnioCreacion.Text);
-            edificio.Amenities = "SUM";
-            //edificio.Amenities = Convert.ToString(cblAmenities.Items);
             edificio.FechaAlta = calNuevaTareaFecha.SelectedDate.Date;
             edificio.Comentarios = txtComentarios.Text;
 
+            int itemsChequeados = 0;
+            //StringBuilder amenities = new StringBuilder();
+            string amenities = "";
 
+            foreach(ListItem item in cblAmenities.Items)
+            {
+                if(item.Selected)
+                {
+                    itemsChequeados++;
+
+                   // amenities.Append(item.Value);
+                    amenities += String.Concat(item.Value,"|");
+                
+                }    
+
+            }
+
+            if (itemsChequeados != 0)
+            {
+                edificio.Amenities = amenities.ToString();
+            }
+            else
+            {
+                edificio.Amenities = "Ninguno";
+            
+            }
+            
 
             edificioServicio.CrearEdificio(edificio);
             Response.Redirect("~/Presentacion/Home.aspx");
