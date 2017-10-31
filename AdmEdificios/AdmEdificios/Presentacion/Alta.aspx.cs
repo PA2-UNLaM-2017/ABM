@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using AdmEdificios.Negocio;
-using System.Text;
 
 namespace AdmEdificios.Presentacion
 {
@@ -44,7 +43,6 @@ namespace AdmEdificios.Presentacion
             edificio.Comentarios = txtComentarios.Text;
 
             int itemsChequeados = 0;
-            //StringBuilder amenities = new StringBuilder();
             string amenities = "";
 
             foreach(ListItem item in cblAmenities.Items)
@@ -52,12 +50,8 @@ namespace AdmEdificios.Presentacion
                 if(item.Selected)
                 {
                     itemsChequeados++;
-
-                   // amenities.Append(item.Value);
-                    amenities += String.Concat(item.Value,"|");
-                
-                }    
-
+                    amenities += String.Concat(item.Value,"|");         
+                }  
             }
 
             if (itemsChequeados != 0)
@@ -67,7 +61,6 @@ namespace AdmEdificios.Presentacion
             else
             {
                 edificio.Amenities = "Ninguno";
-            
             }
             
 

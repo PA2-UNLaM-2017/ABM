@@ -1,9 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Home.Master" AutoEventWireup="true" CodeBehind="Alta.aspx.cs" Inherits="AdmEdificios.Presentacion.Alta" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Home.Master" AutoEventWireup="true" CodeBehind="Modificacion.aspx.cs" Inherits="AdmEdificios.Presentacion.Modificacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-
-
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--  PARA MODIFICAR UN EDIFICIO -->
     <div class="container margin-bottom">
         <div id="page-wrapper" class="col-md-6 col-md-offset-3">
@@ -38,6 +36,12 @@
             </div>
 
             <div class="row">
+
+                <div class="form-group col-md-6">
+                    <asp:Label ID="lblCodPostal" Text="Cod. Postal:" for="txtCodPostal"
+                        runat="server" />
+                    <asp:TextBox class="form-control" runat="server" ID="txtCodPostal" placeholder="Pisos" />
+                </div>
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblCantPisos" Text="Cant. Pisos:" for="txtCantPisos"
                         runat="server" />
@@ -65,27 +69,23 @@
                 
                 <asp:CheckBoxList ID="cblAmenities" runat="server">
 
-                    <asp:ListItem Value="value"
-                        Selected="True">
-                        Ninguno
-                    </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="SUM"
                         Selected="False">
                         SUM
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Parrilla"
                         Selected="False">
                         Parrilla
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Pileta"
                         Selected="False">
                         Pileta
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Gimnasio"
                         Selected="False">
                         Gimnasio
                     </asp:ListItem>
-                    <asp:ListItem Value="value"
+                    <asp:ListItem Value="Seguridad"
                         Selected="False">
                         Seguridad
                     </asp:ListItem>

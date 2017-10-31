@@ -38,15 +38,16 @@
                             <asp:BoundField DataField="Comentarios" HeaderText="Comentarios" ReadOnly="True" />
                             <asp:TemplateField HeaderText="Modificar" ShowHeader="False">
                                <ItemTemplate>
-                                    <asp:Button ID="btnModificar" class="btn btn-outline btn-success btn-sm" runat="server" CausesValidation="false" CommandName="Update"
-                                        Text="Modif" /><%--  OnClick="btnModificar_Click" /> --%>
+                                    <a href="/Presentacion/Modificacion.aspx?id=<%# Eval("IdEdificio") %>" title="Modificar" name="Modificar" >
+                                    <span aria-hidden="true" class="glyphicon glyphicon-edit"></span>
+                                    </a>
                                 </ItemTemplate> 
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Eliminar" ShowHeader="False">
                                  <ItemTemplate>
 
                                     <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar" >
-                                    <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                                    <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                     </a>
 
                                 </ItemTemplate> 
