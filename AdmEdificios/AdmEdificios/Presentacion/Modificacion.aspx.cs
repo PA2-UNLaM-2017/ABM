@@ -10,7 +10,7 @@ namespace AdmEdificios.Presentacion
 {
     public partial class Modificacion : System.Web.UI.Page
     {
-
+        BarrioServicio barrioServicio = new BarrioServicio();
         EdificioServicio es = new EdificioServicio();
         Edificios edificio = new Edificios();
 
@@ -23,6 +23,11 @@ namespace AdmEdificios.Presentacion
             {
                 if (!String.IsNullOrEmpty(Request.QueryString["id"]))
                 {
+
+                    ddlBarrioCABA.DataSource = barrioServicio.ListarBarrios();
+                    ddlBarrioCABA.DataTextField = "Nombre";
+                    ddlBarrioCABA.DataValueField = "IdBarrio";
+                    ddlBarrioCABA.DataBind();
 
                     int idEdificio = Int32.Parse(Request.QueryString["id"]);
 
@@ -37,7 +42,6 @@ namespace AdmEdificios.Presentacion
 
          public void CargaEdificio(Edificios edificio)
         {
-
             txtNombreEdificio.Text = edificio.Nombre;
             txtDireccion.Text = edificio.Direccion;
             ddlBarrioCABA.SelectedValue = edificio.IdBarrioCABA.ToString();
@@ -57,34 +61,10 @@ namespace AdmEdificios.Presentacion
 
                 foreach (string item in separo)
                 {
-
-
-                   /* ListItem amenity = cblAmenities.Items.FindByValue(item);
-
-                    amenity.Selected = true;*/
-
-
-                    cblAmenities.Items.FindByValue(item).Selected = true;
-
-
-                    /*foreach(ListItem chequear in cblAmenities.Items)
-                    {
-                        if(chequear.Value == item)
-                        {
-
-                            
-                            chequear.Selected = true;  
-                                   
-                        }  
-                    }*/
-                
-                }
-            
-            
+                    cblAmenities.Items.FindByValue(item).Selected = true;                
+                }           
             }
-
         }
-
 
     }
 }
