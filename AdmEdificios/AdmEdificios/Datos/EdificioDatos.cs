@@ -53,5 +53,24 @@ namespace AdmEdificios.Datos
             context.SaveChanges();
         }
 
-    }
+
+        // MODIFICA EDIFICIO
+        public void ModificarEdificio(int idEdi, Edificios edificioModif)
+        {
+            Edificios edificioAnt = context.Edificios.Where(e => e.IdEdificio == idEdi).FirstOrDefault();
+            edificioAnt.Nombre = edificioModif.Nombre;
+            edificioAnt.Direccion = edificioModif.Direccion;
+            edificioAnt.IdBarrioCABA = edificioModif.IdBarrioCABA;
+            edificioAnt.CodPostal = edificioModif.CodPostal;
+            edificioAnt.CantPisos = edificioModif.CantPisos;
+            edificioAnt.CantDptos = edificioModif.CantDptos;
+            edificioAnt.CantCocheras = edificioModif.CantCocheras;
+            edificioAnt.AnioCreacion = edificioModif.AnioCreacion;
+            edificioAnt.FechaAlta = edificioModif.FechaAlta;
+            edificioAnt.Comentarios = edificioModif.Comentarios;
+            edificioAnt.Amenities = edificioModif.Amenities;
+            context.SaveChanges();
+        }
+
+     }
 }

@@ -126,7 +126,7 @@
             <div class="form-group">
                 <asp:Button ID="btnGuardar" Text="Guardar" 
                     ValidationGroup="tarea" runat="server" class="btn btn-success" OnClick="btnGuardarEdificio_Click" />
-                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar"/>
+                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" OnClick="btnCancelar_Click"/>
             </div>
 
         </div>

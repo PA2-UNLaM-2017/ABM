@@ -10,15 +10,15 @@ namespace AdmEdificios.Presentacion
 {
     public partial class Alta : System.Web.UI.Page
     {
-        BarrioServicio barrioServicio = new BarrioServicio();
-        EdificioServicio edificioServicio = new EdificioServicio();
+        BarrioServicio bs = new BarrioServicio();
+        EdificioServicio es = new EdificioServicio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 calNuevaTareaFecha.SelectedDate = DateTime.Now.Date; // Selecciona el dia de hoy en el calendario.
-                ddlBarrioCABA.DataSource = barrioServicio.ListarBarrios();
+                ddlBarrioCABA.DataSource = bs.ListarBarrios();
                 ddlBarrioCABA.DataTextField = "Nombre";
                 ddlBarrioCABA.DataValueField = "IdBarrio";
                 ddlBarrioCABA.DataBind();
@@ -64,9 +64,14 @@ namespace AdmEdificios.Presentacion
             }
             
 
-            edificioServicio.CrearEdificio(edificio);
+            es.CrearEdificio(edificio);
             Response.Redirect("~/Presentacion/Home.aspx");
 
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Presentacion/Home.aspx");
         }
 
     }

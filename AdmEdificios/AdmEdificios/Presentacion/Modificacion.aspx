@@ -8,6 +8,9 @@
             <h3 class="page-header">
                 Modificación de Edificio</h3>
             <div class="form-group">
+
+                <asp:Label ID="lblParaID" Text="" Visible="false" runat="server" />
+
                 <asp:Label ID="lblNombreEdificio" Text="Nombre:" runat="server" for="txtNombreEdificio" />
                 <asp:TextBox class="form-control" runat="server" ID="txtNombreEdificio" placeholder="Escriba aquí el nombre" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtNombreEdificio"
@@ -125,8 +128,8 @@
 
             <div class="form-group">
                 <asp:Button ID="btnGuardar" Text="Guardar" 
-                    ValidationGroup="tarea" runat="server" class="btn btn-success" />
-                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar"/>
+                    ValidationGroup="tarea" runat="server" class="btn btn-success" OnClick="btnGuardarCambios_Click" />
+                <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" OnClick="btnCancelar_Click"/>
             </div>
 
         </div>

@@ -25,6 +25,7 @@ namespace AdmEdificios.Negocio
         }
 
 
+        // VA A BUSCAR EL EDIFICIO POR ID
         public Edificios BuscarEdificio(int idEdificio)
         {
 
@@ -33,12 +34,20 @@ namespace AdmEdificios.Negocio
         }
 
 
+        // VA A ELIMINAR EL EDIFICIO
         public void EliminarEdificio(int idEdificio)
-         { 
+        { 
             
-            ed.EliminarEdificio(idEdificio);
+           ed.EliminarEdificio(idEdificio);
         
-         }
+        }
+
+
+        // VA A MODIFICAR EL EDIFICIO
+        public void ModificarEdificio(int idEdi, Edificios edificio)
+        {
+            ed.ModificarEdificio(idEdi, edificio);  
+        }
 
     }
 }

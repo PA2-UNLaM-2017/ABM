@@ -42,6 +42,7 @@ namespace AdmEdificios.Presentacion
 
          public void CargaEdificio(Edificios edificio)
         {
+            lblParaID.Text = edificio.IdEdificio.ToString();
             txtNombreEdificio.Text = edificio.Nombre;
             txtDireccion.Text = edificio.Direccion;
             ddlBarrioCABA.SelectedValue = edificio.IdBarrioCABA.ToString();
@@ -61,10 +62,61 @@ namespace AdmEdificios.Presentacion
 
                 foreach (string item in separo)
                 {
-                    cblAmenities.Items.FindByValue(item).Selected = true;                
+                    if(item != "")
+                        cblAmenities.Items.FindByValue(item).Selected = true;                
                 }           
             }
         }
+
+         protected void btnGuardarCambios_Click(object sender, EventArgs e)
+         {
+             Edificios edificio = new Edificios();
+
+             int idEdi = Convert.ToInt16(lblParaID.Text);
+
+             edificio.Nombre = txtNombreEdificio.Text;
+             edificio.Direccion = txtDireccion.Text;
+             edificio.IdBarrioCABA = Convert.ToInt16(ddlBarrioCABA.SelectedValue);
+             edificio.CodPostal = txtCodPostal.Text;
+             edificio.CantPisos = Convert.ToInt16(txtCantPisos.Text);
+             edificio.CantDptos = Convert.ToInt16(txtCantDptos.Text);
+             edificio.CantCocheras = Convert.ToInt16(txtCocheras.Text);
+             edificio.AnioCreacion = Convert.ToInt16(txtAnioCreacion.Text);
+             edificio.FechaAlta = calNuevaTareaFecha.SelectedDate.Date;
+             edificio.Comentarios = txtComentarios.Text;
+
+             int itemsChequeados = 0;
+             string amenities = "";
+
+             foreach (ListItem item in cblAmenities.Items)
+             {
+                 if (item.Selected)
+                 {
+                     itemsChequeados++;
+                     amenities += String.Concat(item.Value, "|");
+                 }
+             }
+
+             if (itemsChequeados != 0)
+             {
+                 edificio.Amenities = amenities.ToString();
+             }
+             else
+             {
+                 edificio.Amenities = "Ninguno";
+             }
+
+
+             es.ModificarEdificio(idEdi, edificio);
+
+
+             Response.Redirect("~/Presentacion/Home.aspx");
+         }
+
+         protected void btnCancelar_Click(object sender, EventArgs e)
+         {
+             Response.Redirect("~/Presentacion/Home.aspx");
+         }
 
     }
 }
