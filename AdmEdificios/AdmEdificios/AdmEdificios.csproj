@@ -123,6 +123,7 @@
     <Compile Include="Datos\BarrioDatos.cs" />
     <Compile Include="Datos\EdificioDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />
+    <Compile Include="EdificioGridView.cs" />
     <Compile Include="Edificios.cs">
       <DependentUpon>AdmEdificios.tt</DependentUpon>
     </Compile>

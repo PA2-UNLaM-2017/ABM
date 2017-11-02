@@ -28,7 +28,7 @@
                             <asp:BoundField DataField="IdEdificio" HeaderText="IdEdificio" Visible="False" />
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" />
                             <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" />
-                            <asp:BoundField DataField="IdBarrioCABA" HeaderText="Barrio CABA" ReadOnly="True" />
+                            <asp:BoundField DataField="BarrioCABA" HeaderText="Barrio CABA" ReadOnly="True" />
                             <asp:BoundField DataField="CodPostal" HeaderText="Cod. Postal" ReadOnly="True" Visible="False" />
                             <asp:BoundField DataField="CantPisos" HeaderText="Cant. Pisos" ReadOnly="True" Visible="False" />
                             <asp:BoundField DataField="CantDptos" HeaderText="Cant. Dptos" ReadOnly="True" Visible="False" />

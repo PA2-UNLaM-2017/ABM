@@ -44,5 +44,16 @@ namespace AdmEdificios.Datos
       
         }
 
+
+        // BUSCA UN BARRIO EN PARTICULAR POR SU ID
+        public BarriosCABA BuscarBarrioXID(int idBarrio)
+        {
+
+            var edificio = context.BarriosCABA.Single(e => e.IdBarrio == idBarrio);
+
+            return edificio;
+
+        }
+
     }
 }

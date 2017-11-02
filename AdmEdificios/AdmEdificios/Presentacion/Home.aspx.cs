@@ -29,10 +29,36 @@ namespace AdmEdificios.Presentacion
         {
 
             List<Edificios> edificios = new List<Edificios>();
+            List<EdificioGridView> ListaGridView = new List<EdificioGridView>();
+            
 
             edificios = es.ListarEdificios();
 
-            gvListaEdificios.DataSource = edificios;
+            foreach(var item in edificios)
+            {
+
+                EdificioGridView ediGridView = new EdificioGridView();
+
+                var barrio = bs.BuscarBarrioXID(item.IdBarrioCABA);
+
+                ediGridView.IdEdificio = item.IdEdificio;
+                ediGridView.Nombre = item.Nombre;
+                ediGridView.Direccion = item.Direccion;
+                ediGridView.BarrioCABA = barrio.Nombre;
+                ediGridView.CodPostal = item.CodPostal;
+                ediGridView.CantPisos = item.CantPisos;
+                ediGridView.CantDptos = item.CantDptos;
+                ediGridView.CantCocheras = item.CantCocheras;
+                ediGridView.AnioCreacion = item.AnioCreacion;
+                ediGridView.FechaAlta = item.FechaAlta;
+                ediGridView.Amenities = item.Amenities;
+                ediGridView.Comentarios = item.Comentarios;
+
+                ListaGridView.Add(ediGridView);
+            
+            }
+
+            gvListaEdificios.DataSource = ListaGridView;
             gvListaEdificios.DataBind();
 
         }

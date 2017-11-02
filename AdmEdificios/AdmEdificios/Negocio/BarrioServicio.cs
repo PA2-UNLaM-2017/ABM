@@ -25,5 +25,11 @@ namespace AdmEdificios.Negocio
         }
 
 
+        // BUSCA UN BARRIO EN PARTICULAR POR SU ID
+        public BarriosCABA BuscarBarrioXID(int idBarrio)
+        {
+            return bd.BuscarBarrioXID(idBarrio);
+        }
+
     }
 }

@@ -25,7 +25,7 @@
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblBarrioCABA" Text="Barrio CABA:" for="ddlBarrioCABA"
                         runat="server" />
-                    <asp:DropDownList class="form-control" ID="ddlBarrioCABA" runat="server">
+                    <asp:DropDownList class="form-control" ID="ddlBarrioCABA" runat="server" Enabled="false" EnableTheming="true">
                     </asp:DropDownList>
                 </div>
             </div>

@@ -10,7 +10,6 @@ namespace AdmEdificios.Datos
 
         AdmEdificiosEntities context = new AdmEdificiosEntities();
 
-
         // GUARDA EL EDIFICIO CREADO EN EL ALTA
         public void CrearEdificio(Edificios edificio)
         {
@@ -22,6 +21,7 @@ namespace AdmEdificios.Datos
 
 
         // LISTA TODOS LOS EIDIFICIOS DE LA BASE DE DATOS
+
         public List<Edificios> ListarEdificios()
         {
 
@@ -32,7 +32,7 @@ namespace AdmEdificios.Datos
         }
 
 
-        // BUSCAR UN EDIFICIO EN PARTICULAR
+        // BUSCA UN EDIFICIO EN PARTICULAR
         public Edificios BuscarEdificio(int idEdificio)
         {
 
