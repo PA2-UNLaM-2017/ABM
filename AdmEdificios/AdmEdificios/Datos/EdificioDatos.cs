@@ -81,7 +81,25 @@ namespace AdmEdificios.Datos
             return edificiosXBarrio;
         }
 
+        // BUSCA EDIFICIOS POR AÑO DE CREACIÓN
+        public List<Edificios> BuscaEdificiosXAnioCreacion(int anioCreacion)
+        {
+            var edificiosXAnioCreacion = context.Edificios.Where(e => e.AnioCreacion == anioCreacion).ToList();
 
+            return edificiosXAnioCreacion;
+        }
+
+
+        // BUSCA EDIFICIOS POR AÑO Y FECHA DE CREACION
+        public List<Edificios> BuscaEdificiosXBarrioYAnioCreacion(int idBarrio, int anioCreacion)
+        {
+
+            var edificiosBarrioAnio = context.Edificios.Where(e => e.IdBarrioCABA == idBarrio)
+                                                        .Where(e => e.AnioCreacion == anioCreacion).ToList();
+
+            return edificiosBarrioAnio;
+        
+        }
 
     }
 }

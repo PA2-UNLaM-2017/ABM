@@ -11,15 +11,8 @@
             <br />
             <asp:TextBox class="form-control" runat="server" ID="txtBuscaAnioCreacion" placeholder="Ingrese año de creación" />
             <br />
-            
-            
-            <%--<a class="btn btn-primary fa-with-txt">&#xf002; Buscar</a>--%>
-
 
             <asp:Button ID="btnBuscar" Text="&#xf002; Buscar" class="btn btn-primary fa-with-txt" runat="server" OnClick="btnBuscar_Click" />
-
-
-
 
         </div>
         <div id="page-wrapper" class="col-md-9">

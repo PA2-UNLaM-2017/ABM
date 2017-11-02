@@ -52,6 +52,18 @@ namespace AdmEdificios.Negocio
         }
 
 
+        // VA A BUSCAR EDIFICIOS POR AÑO DE CREACIÓN
+        public List<Edificios> BuscaEdificiosXAnioCreacion(int anioCreacion)
+        {
+            return ed.BuscaEdificiosXAnioCreacion(anioCreacion);
+        }
+
+
+        // BUSCA EDIFICIOS POR AÑO Y FECHA DE CREACION
+        public List<Edificios> BuscaEdificiosXBarrioYAnioCreacion(int idBarrio, int anioCreacion)
+        {
+            return ed.BuscaEdificiosXBarrioYAnioCreacion(idBarrio, anioCreacion);
+        }
 
     }
 }

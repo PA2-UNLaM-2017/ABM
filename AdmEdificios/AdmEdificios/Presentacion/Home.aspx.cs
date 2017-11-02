@@ -47,33 +47,53 @@ namespace AdmEdificios.Presentacion
             {
 
                 if (barrio != "" && anioCreacion == "")
-                { 
+                {
                     // barrio no es null
 
                     int idBarrio = bs.BuscarUnBarrio(barrio);
 
                     if (idBarrio != 1000)
-                    { 
-                    List<Edificios> edificiosXBarrio = new List<Edificios>();
+                    {
+                        List<Edificios> edificiosXBarrio = new List<Edificios>();
 
                         edificiosXBarrio = es.BuscaEdificiosXBarrio(idBarrio);
 
                         gvListaEdificios.DataSource = edificiosXBarrio;
-                        gvListaEdificios.DataBind(); 
+                        gvListaEdificios.DataBind();
                     }
 
                 }
-                else if(anioCreacion != "" && barrio == "")
+                else if (anioCreacion != "" && barrio == "")
                 {
-                    // anioCreacion no es null
+                    List<Edificios> edificiosXAnioCreacion = new List<Edificios>();
 
+                    edificiosXAnioCreacion = es.BuscaEdificiosXAnioCreacion(Convert.ToInt16(anioCreacion));
 
+                    gvListaEdificios.DataSource = edificiosXAnioCreacion;
+                    gvListaEdificios.DataBind();
                 }
                 else
                 {
                     // barrio y anioCreacion no son null
-                
+
+                    int idBarrio = bs.BuscarUnBarrio(barrio);
+
+                    if (idBarrio != 1000)
+                    {
+                        List<Edificios> edificiosXBarrioAnio = new List<Edificios>();
+
+                        edificiosXBarrioAnio = es.BuscaEdificiosXBarrioYAnioCreacion(idBarrio, Convert.ToInt16(anioCreacion));
+
+                        gvListaEdificios.DataSource = edificiosXBarrioAnio;
+                        gvListaEdificios.DataBind();
+                    }
+
+
                 }
+            }
+            else 
+            {
+                CargaTablaEdificios();
             }
 
 
