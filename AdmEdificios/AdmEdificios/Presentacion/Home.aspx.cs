@@ -12,6 +12,7 @@ namespace AdmEdificios.Presentacion
     {
 
         EdificioServicio es = new EdificioServicio();
+        BarrioServicio bs = new BarrioServicio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,6 +36,50 @@ namespace AdmEdificios.Presentacion
             gvListaEdificios.DataBind();
 
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            string barrio = txtBuscaBarrio.Text;
+            string anioCreacion = txtBuscaAnioCreacion.Text;
+
+            if (barrio != "" || anioCreacion != "")
+            {
+
+                if (barrio != "" && anioCreacion == "")
+                { 
+                    // barrio no es null
+
+                    int idBarrio = bs.BuscarUnBarrio(barrio);
+
+                    if (idBarrio != 1000)
+                    { 
+                    List<Edificios> edificiosXBarrio = new List<Edificios>();
+
+                        edificiosXBarrio = es.BuscaEdificiosXBarrio(idBarrio);
+
+                        gvListaEdificios.DataSource = edificiosXBarrio;
+                        gvListaEdificios.DataBind(); 
+                    }
+
+                }
+                else if(anioCreacion != "" && barrio == "")
+                {
+                    // anioCreacion no es null
+
+
+                }
+                else
+                {
+                    // barrio y anioCreacion no son null
+                
+                }
+            }
+
+
+        }
+
+
 
     }
 }

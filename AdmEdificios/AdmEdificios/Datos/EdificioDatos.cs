@@ -72,5 +72,16 @@ namespace AdmEdificios.Datos
             context.SaveChanges();
         }
 
-     }
+
+        // BUSCA EDIFICIOS POR BARRIO
+        public List<Edificios> BuscaEdificiosXBarrio(int idBarrio)
+        {
+            var edificiosXBarrio = context.Edificios.Where(e => e.IdBarrioCABA == idBarrio).ToList();
+
+            return edificiosXBarrio;
+        }
+
+
+
+    }
 }

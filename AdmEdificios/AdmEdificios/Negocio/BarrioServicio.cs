@@ -16,5 +16,14 @@ namespace AdmEdificios.Negocio
         {
             return bd.ListarBarrios();
         }
+
+        // VA A BUSCAR UN BARRIO POR SU NOMBRE
+        public int BuscarUnBarrio(string nombreBarrio)
+        {
+            return bd.BuscarUnBarrio(nombreBarrio);
+ 
+        }
+
+
     }
 }
