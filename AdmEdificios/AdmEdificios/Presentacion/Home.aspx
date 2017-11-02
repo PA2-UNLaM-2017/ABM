@@ -29,14 +29,21 @@
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" />
                             <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" />
                             <asp:BoundField DataField="IdBarrioCABA" HeaderText="Barrio CABA" ReadOnly="True" />
-                            <asp:BoundField DataField="CodPostal" HeaderText="Cod. Postal" ReadOnly="True" />
-                            <asp:BoundField DataField="CantPisos" HeaderText="Cant. Pisos" ReadOnly="True" />
-                            <asp:BoundField DataField="CantDptos" HeaderText="Cant. Dptos" ReadOnly="True" />
-                            <asp:BoundField DataField="CantCocheras" HeaderText="Cant. Cocheras" ReadOnly="True" />
-                            <asp:BoundField DataField="AnioCreacion" HeaderText="Año Creación" ReadOnly="True" />
+                            <asp:BoundField DataField="CodPostal" HeaderText="Cod. Postal" ReadOnly="True" Visible="False" />
+                            <asp:BoundField DataField="CantPisos" HeaderText="Cant. Pisos" ReadOnly="True" Visible="False" />
+                            <asp:BoundField DataField="CantDptos" HeaderText="Cant. Dptos" ReadOnly="True" Visible="False" />
+                            <asp:BoundField DataField="CantCocheras" HeaderText="Cant. Cocheras" ReadOnly="True" Visible="False" />
+                            <asp:BoundField DataField="AnioCreacion" HeaderText="Año Creación" ReadOnly="True" Visible="False" />
                             <asp:BoundField DataField="Amenities" HeaderText="Amenities" ReadOnly="True" />
-                            <asp:BoundField DataField="FechaAlta" DataFormatString="{0:d}" HeaderText="Fecha Alta" ReadOnly="True" />                         
-                            <asp:BoundField DataField="Comentarios" HeaderText="Comentarios" ReadOnly="True" />
+                            <asp:BoundField DataField="FechaAlta" DataFormatString="{0:d}" HeaderText="Fecha Alta" ReadOnly="True" Visible="False" />                         
+                            <asp:BoundField DataField="Comentarios" HeaderText="Comentarios" ReadOnly="True" Visible="False" />
+                            <asp:TemplateField HeaderText="Detalle" ShowHeader="False">
+                               <ItemTemplate>
+                                    <a href="/Presentacion/VerDetalle.aspx?id=<%# Eval("IdEdificio") %>" title="Ver Detalle" name="Ver Detalle" >
+                                    <span aria-hidden="true" class="glyphicon glyphicon-edit"></span>
+                                    </a>
+                                </ItemTemplate> 
+                            </asp:TemplateField>
                             <asp:TemplateField HeaderText="Modificar" ShowHeader="False">
                                <ItemTemplate>
                                     <a href="/Presentacion/Modificacion.aspx?id=<%# Eval("IdEdificio") %>" title="Modificar" name="Modificar" >

@@ -98,6 +98,7 @@
   <ItemGroup>
     <Content Include="Presentacion\Login.aspx" />
     <Content Include="Presentacion\Modificacion.aspx" />
+    <Content Include="Presentacion\VerDetalle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="Presentacion\Modificacion.aspx.designer.cs">
       <DependentUpon>Modificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\VerDetalle.aspx.cs">
+      <DependentUpon>VerDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\VerDetalle.aspx.designer.cs">
+      <DependentUpon>VerDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagrams.cs">
