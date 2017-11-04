@@ -10,9 +10,9 @@
             <img src="img/edificio-colorido.jpg" />
         </div>
         <div class="col-md-6 ">
-            <h2>
-                Inicie Sesión<small> para poder administrar</small></h2>
-       
+
+            <h2>Inicie Sesión<small> para poder administrar</small></h2>
+
             <div class="form-group">
                 <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 <asp:TextBox ID="txtEmail" class="form-control" runat="server" TextMode="Email"></asp:TextBox>
@@ -26,27 +26,26 @@
             <div class="form-group">
                 <asp:Label ID="lblContrasenia" runat="server" Text="Contraseña:"></asp:Label>
                 <asp:TextBox ID="txtContrasenia" class="form-control" runat="server" TextMode="Password"></asp:TextBox>
-              <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtContrasenia"
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtContrasenia"
                     ValidationGroup="inicioSesion" Display="Dynamic" ForeColor="Red" runat="server"
                     ErrorMessage="*Campo obligatorio"></asp:RequiredFieldValidator>
             </div>
-            
+
+
             <div class="form-group">
 
                 <asp:Label ID="lblMensaje1" CssClass="col-md-12" runat="server" Text=""></asp:Label>
 
-                <asp:Button ID="btnIngresar" runat="server" ValidationGroup="inicioSesion" Text="Ingresar"
+                   <asp:Button ID="btnIngresar" runat="server" ValidationGroup="inicioSesion" Text="Ingresar"
                     class="btn btn-success btn-lg" OnClick="btnIngresar_Click" />
 
-                
 
-             <%--   <asp:Label ID="lblMensaje2" runat="server" Text=""></asp:Label>
+
+                <%--   <asp:Label ID="lblMensaje2" runat="server" Text=""></asp:Label>
                 <asp:Label ID="lblMensaje3" runat="server" Text=""></asp:Label> --%>
-                
-              <%--   <asp:Button ID="btnIngresar" runat="server" ValidationGroup="ingresar" Text="Iniciar Sesión"
-                    CssClass="btn btn-primary btn-sm" OnClick="btnIngresar_Click" /> --%>
-                
 
+                <%--   <asp:Button ID="btnIngresar" runat="server" ValidationGroup="ingresar" Text="Iniciar Sesión"
+                    CssClass="btn btn-primary btn-sm" OnClick="btnIngresar_Click" /> --%>
             </div>
 
         </div>

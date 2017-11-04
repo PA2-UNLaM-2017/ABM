@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="AdmEdificios.Presentacion.Home" %>
 
+<%@ Register Src="~/Presentacion/UsuarioLogueado.ascx" TagPrefix="uc1" TagName="UsuarioLogueado" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,9 +37,7 @@
             </div>
             <div id="divSessionInfo" class="col-md-6 text-right">
                 Bienvenido,
-                <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                <asp:Button ID="btnSalir" runat="server" Text="&#xf08b; Salir" OnClick="btnSalir_Click" class="btn btn-default fa-with-txt btn-sm">
-                </asp:Button>
+                <uc1:usuariologueado runat="server" id="UsuarioLogueado" /> <!-- Utilización de user control -->
             </div>
         </div>
     </div>

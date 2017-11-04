@@ -19,15 +19,9 @@ namespace AdmEdificios.Presentacion
             else
             {
                 string usuarioLogueado = Session["Email"].ToString();
-                lblUsuario.Text = usuarioLogueado;
+                UsuarioLogueado.Usuario = usuarioLogueado; // ingresa a las propiedades del user control
             }
         }
 
-        protected void btnSalir_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Session.Clear();
-            Response.Redirect("~/Presentacion/Login.aspx");
-        }
     }
 }
