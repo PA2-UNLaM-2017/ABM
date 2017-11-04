@@ -17,7 +17,7 @@ namespace AdmEdificios.Presentacion
         {
             if (!Page.IsPostBack)
             {
-                calNuevaTareaFecha.SelectedDate = DateTime.Now.Date; // Selecciona el dia de hoy en el calendario.
+                calFechaAlta.SelectedDate = DateTime.Now.Date; // Selecciona el dia de hoy en el calendario.
                 ddlBarrioCABA.DataSource = bs.ListarBarrios();
                 ddlBarrioCABA.DataTextField = "Nombre";
                 ddlBarrioCABA.DataValueField = "IdBarrio";
@@ -39,7 +39,7 @@ namespace AdmEdificios.Presentacion
             edificio.CantDptos = Convert.ToInt16(txtCantDptos.Text);
             edificio.CantCocheras = Convert.ToInt16(txtCocheras.Text);
             edificio.AnioCreacion = Convert.ToInt16(txtAnioCreacion.Text);
-            edificio.FechaAlta = calNuevaTareaFecha.SelectedDate.Date;
+            edificio.FechaAlta = calFechaAlta.SelectedDate.Date;
             edificio.Comentarios = txtComentarios.Text;
 
             int itemsChequeados = 0;

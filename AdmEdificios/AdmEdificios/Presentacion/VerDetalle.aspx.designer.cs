@@ -22,6 +22,15 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblParaID;
         
         /// <summary>
+        /// Control lblNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNombre;
+        
+        /// <summary>
         /// Control lblNombreEdificio.
         /// </summary>
         /// <remarks>
@@ -29,15 +38,6 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNombreEdificio;
-        
-        /// <summary>
-        /// Control txtNombreEdificio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreEdificio;
         
         /// <summary>
         /// Control lblDireccion.
@@ -49,13 +49,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblDireccion;
         
         /// <summary>
-        /// Control txtDireccion.
+        /// Control lblDireccionEdificio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        protected global::System.Web.UI.WebControls.Label lblDireccionEdificio;
+        
+        /// <summary>
+        /// Control lblBarrio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBarrio;
         
         /// <summary>
         /// Control lblBarrioCABA.
@@ -67,13 +76,13 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblBarrioCABA;
         
         /// <summary>
-        /// Control ddlBarrioCABA.
+        /// Control lblPosta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBarrioCABA;
+        protected global::System.Web.UI.WebControls.Label lblPosta;
         
         /// <summary>
         /// Control lblCodPostal.
@@ -85,13 +94,13 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblCodPostal;
         
         /// <summary>
-        /// Control txtCodPostal.
+        /// Control lblPisos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodPostal;
+        protected global::System.Web.UI.WebControls.Label lblPisos;
         
         /// <summary>
         /// Control lblCantPisos.
@@ -103,13 +112,13 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblCantPisos;
         
         /// <summary>
-        /// Control txtCantPisos.
+        /// Control lblDptos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantPisos;
+        protected global::System.Web.UI.WebControls.Label lblDptos;
         
         /// <summary>
         /// Control lblCantDptos.
@@ -121,15 +130,6 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblCantDptos;
         
         /// <summary>
-        /// Control txtCantDptos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantDptos;
-        
-        /// <summary>
         /// Control lblCocheras.
         /// </summary>
         /// <remarks>
@@ -139,13 +139,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblCocheras;
         
         /// <summary>
-        /// Control txtCocheras.
+        /// Control lblCantCocheras.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCocheras;
+        protected global::System.Web.UI.WebControls.Label lblCantCocheras;
+        
+        /// <summary>
+        /// Control lblCreacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCreacion;
         
         /// <summary>
         /// Control lblAnioCreacion.
@@ -157,13 +166,13 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblAnioCreacion;
         
         /// <summary>
-        /// Control txtAnioCreacion.
+        /// Control lblAmeni.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnioCreacion;
+        protected global::System.Web.UI.WebControls.Label lblAmeni;
         
         /// <summary>
         /// Control lblAmenities.
@@ -175,40 +184,31 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.Label lblAmenities;
         
         /// <summary>
-        /// Control cblAmenities.
+        /// Control lblAlta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cblAmenities;
+        protected global::System.Web.UI.WebControls.Label lblAlta;
         
         /// <summary>
-        /// Control lblNuevaTareaFecha.
+        /// Control lblFechaAlta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNuevaTareaFecha;
+        protected global::System.Web.UI.WebControls.Label lblFechaAlta;
         
         /// <summary>
-        /// Control calNuevaTareaFecha.
+        /// Control lblComent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calNuevaTareaFecha;
-        
-        /// <summary>
-        /// Control lblError.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label lblComent;
         
         /// <summary>
         /// Control lblComentarios.
@@ -218,15 +218,6 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblComentarios;
-        
-        /// <summary>
-        /// Control txtComentarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComentarios;
         
         /// <summary>
         /// Control btnRegresar.

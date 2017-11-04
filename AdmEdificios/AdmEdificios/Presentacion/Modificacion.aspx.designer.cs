@@ -211,22 +211,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.CheckBoxList cblAmenities;
         
         /// <summary>
-        /// Control lblNuevaTareaFecha.
+        /// Control lblFechaAlta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNuevaTareaFecha;
+        protected global::System.Web.UI.WebControls.Label lblFechaAlta;
         
         /// <summary>
-        /// Control calNuevaTareaFecha.
+        /// Control calFechaAlta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calNuevaTareaFecha;
+        protected global::System.Web.UI.WebControls.Calendar calFechaAlta;
         
         /// <summary>
         /// Control lblError.

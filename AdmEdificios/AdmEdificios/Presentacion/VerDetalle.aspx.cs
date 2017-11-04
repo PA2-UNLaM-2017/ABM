@@ -23,12 +23,6 @@ namespace AdmEdificios.Presentacion
             {
                 if (!String.IsNullOrEmpty(Request.QueryString["id"]))
                 {
-
-                    ddlBarrioCABA.DataSource = bs.ListarBarrios();
-                    ddlBarrioCABA.DataTextField = "Nombre";
-                    ddlBarrioCABA.DataValueField = "IdBarrio";
-                    ddlBarrioCABA.DataBind();
-
                     int idEdificio = Int32.Parse(Request.QueryString["id"]);
 
                     edificio = es.BuscarEdificio(idEdificio);
@@ -41,30 +35,38 @@ namespace AdmEdificios.Presentacion
 
         public void CargaEdificio(Edificios edificio)
         {
-            lblParaID.Text = edificio.IdEdificio.ToString();
-            txtNombreEdificio.Text = edificio.Nombre;
-            txtDireccion.Text = edificio.Direccion;
-            ddlBarrioCABA.SelectedValue = edificio.IdBarrioCABA.ToString();
-            txtCodPostal.Text = edificio.CodPostal;
-            txtCantPisos.Text = edificio.CantPisos.ToString();
-            txtCantDptos.Text = edificio.CantDptos.ToString();
-            txtCocheras.Text = edificio.CantCocheras.ToString();
-            txtAnioCreacion.Text = edificio.AnioCreacion.ToString();
-            calNuevaTareaFecha.SelectedDate = edificio.FechaAlta;
-            txtComentarios.Text = edificio.Comentarios.ToString();
 
-            if (edificio.Amenities != "Ninguno")
-            {
-                string[] separo;
+            EdificioGridView edificioBarrio = new EdificioGridView();
 
-                separo = edificio.Amenities.Split('|');
+            var barrio = bs.BuscarBarrioXID(edificio.IdBarrioCABA);
 
-                foreach (string item in separo)
-                {
-                    if (item != "")
-                        cblAmenities.Items.FindByValue(item).Selected = true;
-                }
-            }
+            edificioBarrio.IdEdificio = edificio.IdEdificio;
+            edificioBarrio.Nombre = edificio.Nombre;
+            edificioBarrio.Direccion = edificio.Direccion;
+            edificioBarrio.BarrioCABA = barrio.Nombre;
+            edificioBarrio.CodPostal = edificio.CodPostal;
+            edificioBarrio.CantPisos = edificio.CantPisos;
+            edificioBarrio.CantDptos = edificio.CantDptos;
+            edificioBarrio.CantCocheras = edificio.CantCocheras;
+            edificioBarrio.AnioCreacion = edificio.AnioCreacion;
+            edificioBarrio.FechaAlta = edificio.FechaAlta;
+            edificioBarrio.Amenities = edificio.Amenities;
+            edificioBarrio.Comentarios = edificio.Comentarios;
+
+
+            lblParaID.Text = edificioBarrio.IdEdificio.ToString();
+            lblNombreEdificio.Text = edificioBarrio.Nombre;
+            lblDireccionEdificio.Text = edificioBarrio.Direccion;
+            lblBarrioCABA.Text = edificioBarrio.BarrioCABA;
+            lblCodPostal.Text = edificioBarrio.CodPostal;
+            lblCantPisos.Text = edificioBarrio.CantPisos.ToString();
+            lblCantDptos.Text = edificioBarrio.CantDptos.ToString();
+            lblCantCocheras.Text = edificioBarrio.CantCocheras.ToString();
+            lblAnioCreacion.Text = edificioBarrio.AnioCreacion.ToString();
+            lblFechaAlta.Text = edificioBarrio.FechaAlta.ToString("dd/MM/yyyy");
+            lblAmenities.Text = edificioBarrio.Amenities;
+            lblComentarios.Text = edificioBarrio.Comentarios.ToString();
+
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)

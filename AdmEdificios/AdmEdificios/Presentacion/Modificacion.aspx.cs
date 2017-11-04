@@ -51,7 +51,7 @@ namespace AdmEdificios.Presentacion
             txtCantDptos.Text = edificio.CantDptos.ToString();
             txtCocheras.Text = edificio.CantCocheras.ToString();
             txtAnioCreacion.Text = edificio.AnioCreacion.ToString();
-            calNuevaTareaFecha.SelectedDate = edificio.FechaAlta;
+            calFechaAlta.SelectedDate = edificio.FechaAlta;
             txtComentarios.Text = edificio.Comentarios.ToString();
 
             if (edificio.Amenities != "Ninguno")
@@ -82,7 +82,7 @@ namespace AdmEdificios.Presentacion
              edificio.CantDptos = Convert.ToInt16(txtCantDptos.Text);
              edificio.CantCocheras = Convert.ToInt16(txtCocheras.Text);
              edificio.AnioCreacion = Convert.ToInt16(txtAnioCreacion.Text);
-             edificio.FechaAlta = calNuevaTareaFecha.SelectedDate.Date;
+             edificio.FechaAlta = calFechaAlta.SelectedDate.Date;
              edificio.Comentarios = txtComentarios.Text;
 
              int itemsChequeados = 0;

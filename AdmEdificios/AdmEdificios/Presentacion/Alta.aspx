@@ -94,8 +94,8 @@
           </div>
 
             <div class="form-group">
-                <asp:Label ID="lblNuevaTareaFecha" Text="Fecha de Alta:" runat="server" for="calNuevaTareaFecha" />
-                <asp:Calendar runat="server" ID="calNuevaTareaFecha" BackColor="White" BorderColor="#3366CC"
+                <asp:Label ID="lblFechaAlta" Text="Fecha de Alta:" runat="server" for="calFechaAlta" />
+                <asp:Calendar runat="server" ID="calFechaAlta" BackColor="White" BorderColor="#3366CC"
                     BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana"
                     Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px">
                     <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
