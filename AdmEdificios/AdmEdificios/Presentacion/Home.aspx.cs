@@ -10,24 +10,20 @@ namespace AdmEdificios.Presentacion
 {
     public partial class Home1 : System.Web.UI.Page
     {
-
         EdificioServicio es = new EdificioServicio();
         BarrioServicio bs = new BarrioServicio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!Page.IsPostBack)
             {
                 CargaTablaEdificios();
             }
-
         }
 
 
         public void CargaTablaEdificios()
         {
-
             List<Edificios> edificios = new List<Edificios>();
 
             edificios = es.ListarEdificios();
@@ -39,19 +35,16 @@ namespace AdmEdificios.Presentacion
                 lblMsjBusqueda.Text = "&#xf06a; No hay edificios agregados";
                 lblMsjBusqueda.Visible = true;
             }
-
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
             string barrio = txtBuscaBarrio.Text;
             string anioCreacion = txtBuscaAnioCreacion.Text;
             lblMsjBusqueda.Visible = false;
 
             if (barrio != "" || anioCreacion != "")
             {
-
                 if (barrio != "" && anioCreacion == "")
                 {
                     // barrio no es null
@@ -71,13 +64,11 @@ namespace AdmEdificios.Presentacion
                             lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio";
                             lblMsjBusqueda.Visible = true;
                         }
-
                     }
                     else
                     {
                         lblBusquedaBarrio.Visible = true;
                     }
-
                 }
                 else if (anioCreacion != "" && barrio == "")
                 {
@@ -113,21 +104,18 @@ namespace AdmEdificios.Presentacion
                         {
                             lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio en ese año";
                             lblMsjBusqueda.Visible = true;
-                        }
-                        
+                        } 
                     }
                     else
                     {
                         lblBusquedaBarrio.Visible = true;
                     }
-
                 }
             }
             else
             {
                 CargaTablaEdificios();
             }
-
         }
 
 
@@ -137,7 +125,6 @@ namespace AdmEdificios.Presentacion
 
             foreach (var item in edificios)
             {
-
                 EdificioGridView edificioGridView = new EdificioGridView();
 
                 var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
@@ -156,16 +143,14 @@ namespace AdmEdificios.Presentacion
                 edificioGridView.Comentarios = item.Comentarios;
 
                 ListaGridView.Add(edificioGridView);
-
             }
 
             gvListaEdificios.DataSource = ListaGridView;
             gvListaEdificios.DataBind();
 
             return ListaGridView.Count();
-        
         }
 
-
     }
+
 }

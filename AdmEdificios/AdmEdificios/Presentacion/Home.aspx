@@ -40,24 +40,24 @@
                             <asp:BoundField DataField="Amenities" HeaderText="Amenities" ReadOnly="True" />
                             <asp:BoundField DataField="FechaAlta" DataFormatString="{0:d}" HeaderText="Fecha Alta" ReadOnly="True" Visible="False" />
                             <asp:BoundField DataField="Comentarios" HeaderText="Comentarios" ReadOnly="True" Visible="False" />
-                            <asp:TemplateField HeaderText="Detalle" ShowHeader="False">
+                            <asp:TemplateField HeaderText="Detalle" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/VerDetalle.aspx?id=<%# Eval("IdEdificio") %>" title="Ver Detalle" name="Ver Detalle">
-                                        <span aria-hidden="true" class="glyphicon glyphicon-edit"></span>
+                                        <span aria-hidden="true" class="fa fa-eye" style="font-size:22px;color:#f0ad4e"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Modificar" ShowHeader="False">
+                            <asp:TemplateField HeaderText="Modificar" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/Modificacion.aspx?id=<%# Eval("IdEdificio") %>" title="Modificar" name="Modificar">
-                                        <span aria-hidden="true" class="glyphicon glyphicon-edit"></span>
+                                        <span aria-hidden="true" class="fa fa-edit" style="font-size:22px;color:#5cb85c"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Eliminar" ShowHeader="False">
+                            <asp:TemplateField HeaderText="Eliminar" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar">
-                                        <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                                        <span aria-hidden="true" class="glyphicon glyphicon-remove" style="font-size:22px;color:#ff3c3c"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>

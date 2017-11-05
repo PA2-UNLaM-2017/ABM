@@ -9,10 +9,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Administración de Edificios</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
     <!-- Core CSS -->
     <link rel="Stylesheet" type="text/css" media="all" href="css/bootstrap.min.css" />
     <link rel="Stylesheet" type="text/css" media="all" href="font-awesome/css/font-awesome.css" />
