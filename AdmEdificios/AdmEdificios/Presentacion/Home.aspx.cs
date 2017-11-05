@@ -30,11 +30,11 @@ namespace AdmEdificios.Presentacion
 
             List<Edificios> edificios = new List<Edificios>();
             List<EdificioGridView> ListaGridView = new List<EdificioGridView>();
-            
+
 
             edificios = es.ListarEdificios();
 
-            foreach(var item in edificios)
+            foreach (var item in edificios)
             {
 
                 EdificioGridView ediGridView = new EdificioGridView();
@@ -55,7 +55,7 @@ namespace AdmEdificios.Presentacion
                 ediGridView.Comentarios = item.Comentarios;
 
                 ListaGridView.Add(ediGridView);
-            
+
             }
 
             gvListaEdificios.DataSource = ListaGridView;
@@ -68,6 +68,7 @@ namespace AdmEdificios.Presentacion
 
             string barrio = txtBuscaBarrio.Text;
             string anioCreacion = txtBuscaAnioCreacion.Text;
+            List<EdificioGridView> ListaGridViewBusqueda = new List<EdificioGridView>();
 
             if (barrio != "" || anioCreacion != "")
             {
@@ -84,7 +85,32 @@ namespace AdmEdificios.Presentacion
 
                         edificiosXBarrio = es.BuscaEdificiosXBarrio(idBarrio);
 
-                        gvListaEdificios.DataSource = edificiosXBarrio;
+                        foreach (var item in edificiosXBarrio)
+                        {
+
+                            EdificioGridView ediGridView = new EdificioGridView();
+
+                            var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
+
+                            ediGridView.IdEdificio = item.IdEdificio;
+                            ediGridView.Nombre = item.Nombre;
+                            ediGridView.Direccion = item.Direccion;
+                            ediGridView.BarrioCABA = barrioNombre.Nombre;
+                            ediGridView.CodPostal = item.CodPostal;
+                            ediGridView.CantPisos = item.CantPisos;
+                            ediGridView.CantDptos = item.CantDptos;
+                            ediGridView.CantCocheras = item.CantCocheras;
+                            ediGridView.AnioCreacion = item.AnioCreacion;
+                            ediGridView.FechaAlta = item.FechaAlta;
+                            ediGridView.Amenities = item.Amenities;
+                            ediGridView.Comentarios = item.Comentarios;
+
+                            ListaGridViewBusqueda.Add(ediGridView);
+
+                        }
+
+
+                        gvListaEdificios.DataSource = ListaGridViewBusqueda;
                         gvListaEdificios.DataBind();
                     }
 
@@ -95,7 +121,31 @@ namespace AdmEdificios.Presentacion
 
                     edificiosXAnioCreacion = es.BuscaEdificiosXAnioCreacion(Convert.ToInt16(anioCreacion));
 
-                    gvListaEdificios.DataSource = edificiosXAnioCreacion;
+                    foreach (var item in edificiosXAnioCreacion)
+                    {
+
+                        EdificioGridView ediGridView = new EdificioGridView();
+
+                        var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
+
+                        ediGridView.IdEdificio = item.IdEdificio;
+                        ediGridView.Nombre = item.Nombre;
+                        ediGridView.Direccion = item.Direccion;
+                        ediGridView.BarrioCABA = barrioNombre.Nombre;
+                        ediGridView.CodPostal = item.CodPostal;
+                        ediGridView.CantPisos = item.CantPisos;
+                        ediGridView.CantDptos = item.CantDptos;
+                        ediGridView.CantCocheras = item.CantCocheras;
+                        ediGridView.AnioCreacion = item.AnioCreacion;
+                        ediGridView.FechaAlta = item.FechaAlta;
+                        ediGridView.Amenities = item.Amenities;
+                        ediGridView.Comentarios = item.Comentarios;
+
+                        ListaGridViewBusqueda.Add(ediGridView);
+
+                    }
+
+                    gvListaEdificios.DataSource = ListaGridViewBusqueda;
                     gvListaEdificios.DataBind();
                 }
                 else
@@ -110,22 +160,42 @@ namespace AdmEdificios.Presentacion
 
                         edificiosXBarrioAnio = es.BuscaEdificiosXBarrioYAnioCreacion(idBarrio, Convert.ToInt16(anioCreacion));
 
-                        gvListaEdificios.DataSource = edificiosXBarrioAnio;
+                        foreach (var item in edificiosXBarrioAnio)
+                        {
+
+                            EdificioGridView ediGridView = new EdificioGridView();
+
+                            var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
+
+                            ediGridView.IdEdificio = item.IdEdificio;
+                            ediGridView.Nombre = item.Nombre;
+                            ediGridView.Direccion = item.Direccion;
+                            ediGridView.BarrioCABA = barrioNombre.Nombre;
+                            ediGridView.CodPostal = item.CodPostal;
+                            ediGridView.CantPisos = item.CantPisos;
+                            ediGridView.CantDptos = item.CantDptos;
+                            ediGridView.CantCocheras = item.CantCocheras;
+                            ediGridView.AnioCreacion = item.AnioCreacion;
+                            ediGridView.FechaAlta = item.FechaAlta;
+                            ediGridView.Amenities = item.Amenities;
+                            ediGridView.Comentarios = item.Comentarios;
+
+                            ListaGridViewBusqueda.Add(ediGridView);
+
+                        }
+
+                        gvListaEdificios.DataSource = ListaGridViewBusqueda;
                         gvListaEdificios.DataBind();
                     }
 
-
                 }
             }
-            else 
+            else
             {
                 CargaTablaEdificios();
             }
 
-
         }
-
-
 
     }
 }

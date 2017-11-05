@@ -67,22 +67,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtContrasenia;
         
         /// <summary>
-        /// Control RequiredFieldValidator6.
+        /// Control rfvContrasenia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContrasenia;
         
         /// <summary>
-        /// Control lblMensaje1.
+        /// Control lblMensajeError.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje1;
+        protected global::System.Web.UI.WebControls.Label lblMensajeError;
         
         /// <summary>
         /// Control btnIngresar.

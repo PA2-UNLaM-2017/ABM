@@ -37,8 +37,8 @@ namespace AdmEdificios.Presentacion
             {
                 txtEmail.Text = "";
                 txtContrasenia.Text = "";
-                lblMensaje1.ForeColor = System.Drawing.Color.Red;
-                lblMensaje1.Text = "Verifique usuario y/o contraseña";
+                lblMensajeError.ForeColor = System.Drawing.Color.Red;
+                lblMensajeError.Text = "*Verifique usuario y/o contraseña";
             }
         }
     }
