@@ -67,11 +67,9 @@
                 <!-- /.table-responsive -->
             </div>
 
-            <asp:Label ID="lblNoHayEdificios" class="alert alert-info fa-with-txt" runat="server" Text="&#xf06a; No hay edificios agregados."
-                Visible="false" />
-
             <asp:Label ID="lblMsjBusqueda" class="alert alert-info fa-with-txt" runat="server" Text="" Visible="false" />
             <br />
+
             <asp:Button ID="btnEdificioNuevo" Text="&#xf067; Edificio Nuevo" class="btn btn-primary fa-with-txt" PostBackUrl="~/Presentacion/Alta.aspx"
                 runat="server" />
 

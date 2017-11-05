@@ -29,37 +29,16 @@ namespace AdmEdificios.Presentacion
         {
 
             List<Edificios> edificios = new List<Edificios>();
-            List<EdificioGridView> ListaGridView = new List<EdificioGridView>();
-
 
             edificios = es.ListarEdificios();
 
-            foreach (var item in edificios)
+            int elementos = ConvierteLista(edificios); // convierte lista Edificios a lista EdificiosGridView
+
+            if (elementos == 0)
             {
-
-                EdificioGridView ediGridView = new EdificioGridView();
-
-                var barrio = bs.BuscarBarrioXID(item.IdBarrioCABA);
-
-                ediGridView.IdEdificio = item.IdEdificio;
-                ediGridView.Nombre = item.Nombre;
-                ediGridView.Direccion = item.Direccion;
-                ediGridView.BarrioCABA = barrio.Nombre;
-                ediGridView.CodPostal = item.CodPostal;
-                ediGridView.CantPisos = item.CantPisos;
-                ediGridView.CantDptos = item.CantDptos;
-                ediGridView.CantCocheras = item.CantCocheras;
-                ediGridView.AnioCreacion = item.AnioCreacion;
-                ediGridView.FechaAlta = item.FechaAlta;
-                ediGridView.Amenities = item.Amenities;
-                ediGridView.Comentarios = item.Comentarios;
-
-                ListaGridView.Add(ediGridView);
-
+                lblMsjBusqueda.Text = "&#xf06a; No hay edificios agregados";
+                lblMsjBusqueda.Visible = true;
             }
-
-            gvListaEdificios.DataSource = ListaGridView;
-            gvListaEdificios.DataBind();
 
         }
 
@@ -68,7 +47,6 @@ namespace AdmEdificios.Presentacion
 
             string barrio = txtBuscaBarrio.Text;
             string anioCreacion = txtBuscaAnioCreacion.Text;
-            List<EdificioGridView> ListaGridViewBusqueda = new List<EdificioGridView>();
             lblMsjBusqueda.Visible = false;
 
             if (barrio != "" || anioCreacion != "")
@@ -86,38 +64,14 @@ namespace AdmEdificios.Presentacion
 
                         edificiosXBarrio = es.BuscaEdificiosXBarrio(idBarrio);
 
-                        foreach (var item in edificiosXBarrio)
-                        {
+                        int elementos = ConvierteLista(edificiosXBarrio); // convierte lista Edificios a lista EdificiosGridView
 
-                            EdificioGridView ediGridView = new EdificioGridView();
-
-                            var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
-
-                            ediGridView.IdEdificio = item.IdEdificio;
-                            ediGridView.Nombre = item.Nombre;
-                            ediGridView.Direccion = item.Direccion;
-                            ediGridView.BarrioCABA = barrioNombre.Nombre;
-                            ediGridView.CodPostal = item.CodPostal;
-                            ediGridView.CantPisos = item.CantPisos;
-                            ediGridView.CantDptos = item.CantDptos;
-                            ediGridView.CantCocheras = item.CantCocheras;
-                            ediGridView.AnioCreacion = item.AnioCreacion;
-                            ediGridView.FechaAlta = item.FechaAlta;
-                            ediGridView.Amenities = item.Amenities;
-                            ediGridView.Comentarios = item.Comentarios;
-
-                            ListaGridViewBusqueda.Add(ediGridView);
-
-                        }
-
-                        if (ListaGridViewBusqueda.Count == 0)
+                        if (elementos == 0)
                         {
                             lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio";
                             lblMsjBusqueda.Visible = true;
                         }
 
-                        gvListaEdificios.DataSource = ListaGridViewBusqueda;
-                        gvListaEdificios.DataBind();
                     }
                     else
                     {
@@ -133,38 +87,13 @@ namespace AdmEdificios.Presentacion
 
                     edificiosXAnioCreacion = es.BuscaEdificiosXAnioCreacion(Convert.ToInt16(anioCreacion));
 
-                    foreach (var item in edificiosXAnioCreacion)
-                    {
+                    int elementos = ConvierteLista(edificiosXAnioCreacion); // convierte lista Edificios a lista EdificiosGridView
 
-                        EdificioGridView ediGridView = new EdificioGridView();
-
-                        var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
-
-                        ediGridView.IdEdificio = item.IdEdificio;
-                        ediGridView.Nombre = item.Nombre;
-                        ediGridView.Direccion = item.Direccion;
-                        ediGridView.BarrioCABA = barrioNombre.Nombre;
-                        ediGridView.CodPostal = item.CodPostal;
-                        ediGridView.CantPisos = item.CantPisos;
-                        ediGridView.CantDptos = item.CantDptos;
-                        ediGridView.CantCocheras = item.CantCocheras;
-                        ediGridView.AnioCreacion = item.AnioCreacion;
-                        ediGridView.FechaAlta = item.FechaAlta;
-                        ediGridView.Amenities = item.Amenities;
-                        ediGridView.Comentarios = item.Comentarios;
-
-                        ListaGridViewBusqueda.Add(ediGridView);
-
-                    }
-
-                    if (ListaGridViewBusqueda.Count == 0)
+                    if (elementos == 0)
                     {
                         lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese año";
                         lblMsjBusqueda.Visible = true;
                     }
-
-                    gvListaEdificios.DataSource = ListaGridViewBusqueda;
-                    gvListaEdificios.DataBind();
                 }
                 else
                 {
@@ -178,38 +107,14 @@ namespace AdmEdificios.Presentacion
 
                         edificiosXBarrioAnio = es.BuscaEdificiosXBarrioYAnioCreacion(idBarrio, Convert.ToInt16(anioCreacion));
 
-                        foreach (var item in edificiosXBarrioAnio)
-                        {
+                        int elementos = ConvierteLista(edificiosXBarrioAnio); // convierte lista Edificios a lista EdificiosGridView
 
-                            EdificioGridView ediGridView = new EdificioGridView();
-
-                            var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
-
-                            ediGridView.IdEdificio = item.IdEdificio;
-                            ediGridView.Nombre = item.Nombre;
-                            ediGridView.Direccion = item.Direccion;
-                            ediGridView.BarrioCABA = barrioNombre.Nombre;
-                            ediGridView.CodPostal = item.CodPostal;
-                            ediGridView.CantPisos = item.CantPisos;
-                            ediGridView.CantDptos = item.CantDptos;
-                            ediGridView.CantCocheras = item.CantCocheras;
-                            ediGridView.AnioCreacion = item.AnioCreacion;
-                            ediGridView.FechaAlta = item.FechaAlta;
-                            ediGridView.Amenities = item.Amenities;
-                            ediGridView.Comentarios = item.Comentarios;
-
-                            ListaGridViewBusqueda.Add(ediGridView);
-
-                        }
-
-                        if (ListaGridViewBusqueda.Count == 0)
+                        if (elementos == 0)
                         {
                             lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio en ese año";
                             lblMsjBusqueda.Visible = true;
                         }
-                        gvListaEdificios.DataSource = ListaGridViewBusqueda;
-                        gvListaEdificios.DataBind();
-
+                        
                     }
                     else
                     {
@@ -224,6 +129,43 @@ namespace AdmEdificios.Presentacion
             }
 
         }
+
+
+        public int ConvierteLista(List<Edificios> edificios)
+        {
+            List<EdificioGridView> ListaGridView = new List<EdificioGridView>();
+
+            foreach (var item in edificios)
+            {
+
+                EdificioGridView edificioGridView = new EdificioGridView();
+
+                var barrioNombre = bs.BuscarBarrioXID(item.IdBarrioCABA);
+
+                edificioGridView.IdEdificio = item.IdEdificio;
+                edificioGridView.Nombre = item.Nombre;
+                edificioGridView.Direccion = item.Direccion;
+                edificioGridView.BarrioCABA = barrioNombre.Nombre;
+                edificioGridView.CodPostal = item.CodPostal;
+                edificioGridView.CantPisos = item.CantPisos;
+                edificioGridView.CantDptos = item.CantDptos;
+                edificioGridView.CantCocheras = item.CantCocheras;
+                edificioGridView.AnioCreacion = item.AnioCreacion;
+                edificioGridView.FechaAlta = item.FechaAlta;
+                edificioGridView.Amenities = item.Amenities;
+                edificioGridView.Comentarios = item.Comentarios;
+
+                ListaGridView.Add(edificioGridView);
+
+            }
+
+            gvListaEdificios.DataSource = ListaGridView;
+            gvListaEdificios.DataBind();
+
+            return ListaGridView.Count();
+        
+        }
+
 
     }
 }
