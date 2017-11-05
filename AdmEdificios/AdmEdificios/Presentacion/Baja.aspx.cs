@@ -10,6 +10,7 @@ namespace AdmEdificios.Presentacion
 {
     public partial class Baja : System.Web.UI.Page
     {
+        BarrioServicio bs = new BarrioServicio();
         EdificioServicio es = new EdificioServicio();
         Edificios edificio = new Edificios();
 
@@ -36,7 +37,9 @@ namespace AdmEdificios.Presentacion
         public void CargaEdificio(Edificios edificio)
         {
 
-            lblDatosEdificio.Text = edificio.Nombre + " situado en " + edificio.Direccion;
+            var barrio = bs.BuscarBarrioXID(edificio.IdBarrioCABA);
+
+            lblDatosEdificio.Text = edificio.Nombre + " situado en " + edificio.Direccion + ", " + barrio.Nombre + ".";
             lblGuardaIdEdificio.Text = edificio.IdEdificio.ToString();
         }
 
