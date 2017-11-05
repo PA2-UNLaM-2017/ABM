@@ -43,21 +43,21 @@
                             <asp:TemplateField HeaderText="Detalle" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/VerDetalle.aspx?id=<%# Eval("IdEdificio") %>" title="Ver Detalle" name="Ver Detalle">
-                                        <span aria-hidden="true" class="fa fa-eye" style="font-size:22px;color:#f0ad4e"></span>
+                                        <span aria-hidden="true" class="fa fa-eye" style="font-size: 22px; color: #f0ad4e"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Modificar" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/Modificacion.aspx?id=<%# Eval("IdEdificio") %>" title="Modificar" name="Modificar">
-                                        <span aria-hidden="true" class="fa fa-edit" style="font-size:22px;color:#5cb85c"></span>
+                                        <span aria-hidden="true" class="fa fa-edit" style="font-size: 22px; color: #5cb85c"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Eliminar" ShowHeader="False" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
                                     <a href="/Presentacion/Baja.aspx?id=<%# Eval("IdEdificio") %>" title="Eliminar" name="Eliminar">
-                                        <span aria-hidden="true" class="glyphicon glyphicon-remove" style="font-size:22px;color:#ff3c3c"></span>
+                                        <span aria-hidden="true" class="glyphicon glyphicon-remove" style="font-size: 22px; color: #ff3c3c"></span>
                                     </a>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -67,8 +67,9 @@
                 <!-- /.table-responsive -->
             </div>
 
-            <asp:Label ID="lblMsjBusqueda" class="alert alert-info fa-with-txt" runat="server" Text="" Visible="false" />
-            <br />
+            <div class="form-group">
+                <asp:Label ID="lblMsjBusqueda" class="alert alert-info fa-with-txt" runat="server" Text="" Visible="false" />
+            </div>
 
             <asp:Button ID="btnEdificioNuevo" Text="&#xf067; Edificio Nuevo" class="btn btn-primary fa-with-txt" PostBackUrl="~/Presentacion/Alta.aspx"
                 runat="server" />
