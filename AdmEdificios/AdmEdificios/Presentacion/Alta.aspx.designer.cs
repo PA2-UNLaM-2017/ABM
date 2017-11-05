@@ -31,22 +31,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtNombreEdificio;
         
         /// <summary>
-        /// Control RequiredFieldValidator1.
+        /// Control rfvNombreEdificio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreEdificio;
         
         /// <summary>
-        /// Control RegularExpressionValidator2.
+        /// Control revNombreEdificio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombreEdificio;
         
         /// <summary>
         /// Control lblDireccion.
@@ -67,13 +67,22 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtDireccion;
         
         /// <summary>
-        /// Control RequiredFieldValidator2.
+        /// Control rfvDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDireccion;
+        
+        /// <summary>
+        /// Control revDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDireccion;
         
         /// <summary>
         /// Control lblBarrioCABA.
@@ -112,6 +121,24 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtCodPostal;
         
         /// <summary>
+        /// Control rfvCodPostal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodPostal;
+        
+        /// <summary>
+        /// Control revCodPostal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCodPostal;
+        
+        /// <summary>
         /// Control lblCantPisos.
         /// </summary>
         /// <remarks>
@@ -128,6 +155,24 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCantPisos;
+        
+        /// <summary>
+        /// Control rfvCantPisos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCantPisos;
+        
+        /// <summary>
+        /// Control rvCantPisos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvCantPisos;
         
         /// <summary>
         /// Control lblCantDptos.
@@ -148,6 +193,24 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtCantDptos;
         
         /// <summary>
+        /// Control rfvCantDptos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCantDptos;
+        
+        /// <summary>
+        /// Control rvCantDptos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvCantDptos;
+        
+        /// <summary>
         /// Control lblCocheras.
         /// </summary>
         /// <remarks>
@@ -166,6 +229,24 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtCocheras;
         
         /// <summary>
+        /// Control rfvCocheras.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCocheras;
+        
+        /// <summary>
+        /// Control rvCocheras.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvCocheras;
+        
+        /// <summary>
         /// Control lblAnioCreacion.
         /// </summary>
         /// <remarks>
@@ -182,6 +263,24 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnioCreacion;
+        
+        /// <summary>
+        /// Control rfvAnioCreacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAnioCreacion;
+        
+        /// <summary>
+        /// Control rvAnioCreacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvAnioCreacion;
         
         /// <summary>
         /// Control lblAmenities.
@@ -245,6 +344,15 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtComentarios;
+        
+        /// <summary>
+        /// Control rfvComentarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvComentarios;
         
         /// <summary>
         /// Control RegularExpressionValidator1.

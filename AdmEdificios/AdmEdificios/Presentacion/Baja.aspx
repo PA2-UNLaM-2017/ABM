@@ -2,8 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
     <!--  PARA DAR DE BAJA UN EDIFICIO -->
     <div class="container margin-bottom">
         <div id="page-wrapper" class="col-md-6 col-md-offset-3">
@@ -14,14 +12,10 @@
                 <asp:Label ID="lblDatosEdificio" Text="" runat="server" />
                 <asp:Label ID="lblGuardaIdEdificio" Text="" Visible="false" runat="server" />
             </div>
-
             <div class="form-group">
                 <asp:Button ID="btnGuardar" Text="Aceptar" runat="server" class="btn btn-success" OnClick="btnGuardarBaja_Click" />
                 <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" OnClick="btnCancelarBaja_Click" />
             </div>
         </div>
     </div>
-
-
-
 </asp:Content>
