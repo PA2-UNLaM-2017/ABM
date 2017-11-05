@@ -22,6 +22,15 @@ namespace AdmEdificios.Presentacion {
         protected global::System.Web.UI.WebControls.TextBox txtBuscaBarrio;
         
         /// <summary>
+        /// Control lblBusquedaBarrio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBusquedaBarrio;
+        
+        /// <summary>
         /// Control txtBuscaAnioCreacion.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBuscaAnioCreacion;
+        
+        /// <summary>
+        /// Control rvAnioCreacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvAnioCreacion;
         
         /// <summary>
         /// Control btnBuscar.
@@ -56,6 +74,15 @@ namespace AdmEdificios.Presentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNoHayEdificios;
+        
+        /// <summary>
+        /// Control lblMsjBusqueda.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsjBusqueda;
         
         /// <summary>
         /// Control btnEdificioNuevo.

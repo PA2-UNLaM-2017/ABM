@@ -69,6 +69,7 @@ namespace AdmEdificios.Presentacion
             string barrio = txtBuscaBarrio.Text;
             string anioCreacion = txtBuscaAnioCreacion.Text;
             List<EdificioGridView> ListaGridViewBusqueda = new List<EdificioGridView>();
+            lblMsjBusqueda.Visible = false;
 
             if (barrio != "" || anioCreacion != "")
             {
@@ -109,14 +110,25 @@ namespace AdmEdificios.Presentacion
 
                         }
 
+                        if (ListaGridViewBusqueda.Count == 0)
+                        {
+                            lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio";
+                            lblMsjBusqueda.Visible = true;
+                        }
 
                         gvListaEdificios.DataSource = ListaGridViewBusqueda;
                         gvListaEdificios.DataBind();
+                    }
+                    else
+                    {
+                        lblBusquedaBarrio.Visible = true;
                     }
 
                 }
                 else if (anioCreacion != "" && barrio == "")
                 {
+                    // año no es null
+
                     List<Edificios> edificiosXAnioCreacion = new List<Edificios>();
 
                     edificiosXAnioCreacion = es.BuscaEdificiosXAnioCreacion(Convert.ToInt16(anioCreacion));
@@ -143,6 +155,12 @@ namespace AdmEdificios.Presentacion
 
                         ListaGridViewBusqueda.Add(ediGridView);
 
+                    }
+
+                    if (ListaGridViewBusqueda.Count == 0)
+                    {
+                        lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese año";
+                        lblMsjBusqueda.Visible = true;
                     }
 
                     gvListaEdificios.DataSource = ListaGridViewBusqueda;
@@ -184,8 +202,18 @@ namespace AdmEdificios.Presentacion
 
                         }
 
+                        if (ListaGridViewBusqueda.Count == 0)
+                        {
+                            lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio en ese año";
+                            lblMsjBusqueda.Visible = true;
+                        }
                         gvListaEdificios.DataSource = ListaGridViewBusqueda;
                         gvListaEdificios.DataBind();
+
+                    }
+                    else
+                    {
+                        lblBusquedaBarrio.Visible = true;
                     }
 
                 }
