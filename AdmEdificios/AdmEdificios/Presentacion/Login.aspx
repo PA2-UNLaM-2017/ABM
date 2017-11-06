@@ -7,7 +7,7 @@
     <!-- CONTENIDO DEL LOGIN -->
     <div class="container  margin-bottom">
         <div class="contenedor-imagen col-md-6">
-            <img src="img/edificio-colorido.jpg" />
+            <img src="img/colores.png" />
         </div>
         <div class="col-md-6 ">
             <h2>Inicie Sesión<small> para poder administrar</small></h2>
