@@ -1,13 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="AdmEdificios.Presentacion.Home" %>
-
 <%@ Register Src="~/Presentacion/UsuarioLogueado.ascx" TagPrefix="uc1" TagName="UsuarioLogueado" %>
-
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Administración de Edificios</title>
     <!-- Core CSS -->
     <link rel="Stylesheet" type="text/css" media="all" href="css/bootstrap.min.css" />
@@ -23,24 +21,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="navbar navbar-fixed-top">
-        <div class='container'>
-            <div class="col-md-6">
-            <a class="navbar-brand" href="Home.aspx"><h4>
-                    Administración de Edificios
-                </h4></a>
-                
-            </div>
-            <div id="divSessionInfo" class="col-md-6 text-right">
-                Bienvenido,
-                <uc1:usuariologueado runat="server" id="UsuarioLogueado" /> <!-- Utilización de user control -->
+        <div class="navbar navbar-fixed-top">
+            <div class='container'>
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="Home.aspx">
+                        <h4>Administración de Edificios</h4>
+                    </a>
+                </div>
+                <div id="divSessionInfo" class="col-md-6 text-right">
+                    Bienvenido,
+                <uc1:UsuarioLogueado runat="server" ID="UsuarioLogueado" />
+                    <!-- Utilización de user control -->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
     <div id="pie" class="fixed-bottom clearfix">
         <div class="modal-footer container">

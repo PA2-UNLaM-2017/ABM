@@ -8,10 +8,10 @@
         <div id="page-wrapper" class="col-md-6 col-md-offset-3">
             <h3 class="page-header">Baja de Edificio</h3>
             <div class="form-group">
-                <asp:Label ID="lblDeseaEliminar" Text="¿Desea eliminar el siguiente edificio?: " runat="server" Font-Italic="true" Font-Size="Medium" />
+                <asp:Label ID="lblDeseaEliminar" Text="¿Desea eliminar el siguiente edificio?: " runat="server" Font-Size="Medium" />
             </div>
             <div class="form-group">
-                <asp:Label ID="lblDatosEdificio" Text="" runat="server" />
+                <asp:Label ID="lblDatosEdificio" Text="" runat="server" Font-Italic="true" />
                 <asp:Label ID="lblGuardaIdEdificio" Text="" Visible="false" runat="server" />
             </div>
             <div class="form-group">

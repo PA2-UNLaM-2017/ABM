@@ -13,7 +13,6 @@ namespace AdmEdificios.Presentacion
         {
             if (Session["Email"] == null)
             {
-
                 Response.Redirect("~/Presentacion/Login.aspx");
             }
             else

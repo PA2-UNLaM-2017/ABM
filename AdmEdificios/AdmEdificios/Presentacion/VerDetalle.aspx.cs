@@ -27,15 +27,13 @@ namespace AdmEdificios.Presentacion
 
                     edificio = es.BuscarEdificio(idEdificio);
                     CargaEdificio(edificio);
-
                 }
             }
-
         }
+
 
         public void CargaEdificio(Edificios edificio)
         {
-
             EdificioGridView edificioBarrio = new EdificioGridView();
 
             var barrio = bs.BuscarBarrioXID(edificio.IdBarrioCABA);
@@ -53,7 +51,6 @@ namespace AdmEdificios.Presentacion
             edificioBarrio.Amenities = edificio.Amenities;
             edificioBarrio.Comentarios = edificio.Comentarios;
 
-
             lblParaID.Text = edificioBarrio.IdEdificio.ToString();
             lblNombreEdificio.Text = edificioBarrio.Nombre;
             lblDireccionEdificio.Text = edificioBarrio.Direccion;
@@ -66,8 +63,8 @@ namespace AdmEdificios.Presentacion
             lblFechaAlta.Text = edificioBarrio.FechaAlta.ToString("dd/MM/yyyy");
             lblAmenities.Text = edificioBarrio.Amenities;
             lblComentarios.Text = edificioBarrio.Comentarios.ToString();
-
         }
+
 
         protected void btnRegresar_Click(object sender, EventArgs e)
         {

@@ -23,12 +23,10 @@ namespace AdmEdificios.Presentacion
                 ddlBarrioCABA.DataValueField = "IdBarrio";
                 ddlBarrioCABA.DataBind();
             }
-
         }
 
         protected void btnGuardarEdificio_Click(object sender, EventArgs e)
         {
-
             Edificios edificio = new Edificios();
 
             edificio.Nombre = txtNombreEdificio.Text;
@@ -45,13 +43,13 @@ namespace AdmEdificios.Presentacion
             int itemsChequeados = 0;
             string amenities = "";
 
-            foreach(ListItem item in cblAmenities.Items)
+            foreach (ListItem item in cblAmenities.Items)
             {
-                if(item.Selected)
+                if (item.Selected)
                 {
                     itemsChequeados++;
-                    amenities += String.Concat(item.Value,"|");         
-                }  
+                    amenities += String.Concat(item.Value, "|");
+                }
             }
 
             if (itemsChequeados != 0)
@@ -62,11 +60,10 @@ namespace AdmEdificios.Presentacion
             {
                 edificio.Amenities = "Ninguno";
             }
-            
+
 
             es.CrearEdificio(edificio);
             Response.Redirect("~/Presentacion/Home.aspx");
-
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

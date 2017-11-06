@@ -10,9 +10,7 @@
             <img src="img/edificio-colorido.jpg" />
         </div>
         <div class="col-md-6 ">
-
             <h2>Inicie Sesión<small> para poder administrar</small></h2>
-
             <div class="form-group">
                 <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                 <asp:TextBox ID="txtEmail" class="form-control" runat="server" TextMode="Email"></asp:TextBox>
@@ -30,17 +28,14 @@
                     ValidationGroup="inicioSesion" Display="Dynamic" ForeColor="Red" runat="server"
                     ErrorMessage="*Campo obligatorio"></asp:RequiredFieldValidator>
             </div>
-   
             <div class="form-group">
                 <asp:Label ID="lblMensajeError" CssClass="col-md-12" runat="server" Text=""></asp:Label>
                 <br />
             </div>
-
             <div class="form-group">
                 <asp:Button ID="btnIngresar" runat="server" ValidationGroup="inicioSesion" Text="Ingresar"
                     class="btn btn-success btn-lg" OnClick="btnIngresar_Click" />
             </div>
-
         </div>
     </div>
 </asp:Content>

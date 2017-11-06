@@ -104,7 +104,7 @@ namespace AdmEdificios.Presentacion
                         {
                             lblMsjBusqueda.Text = "&#xf06a; No hay edificios para ese barrio en ese año";
                             lblMsjBusqueda.Visible = true;
-                        } 
+                        }
                     }
                     else
                     {

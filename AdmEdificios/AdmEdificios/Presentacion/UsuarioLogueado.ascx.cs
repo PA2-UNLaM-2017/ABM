@@ -16,11 +16,8 @@ namespace AdmEdificios.Presentacion
 
         public string Usuario
         {
-
             get { return lblUsuario.Text; }
-
             set { lblUsuario.Text = value; }
-
         }
 
         protected void btnSalir_Click(object sender, EventArgs e)

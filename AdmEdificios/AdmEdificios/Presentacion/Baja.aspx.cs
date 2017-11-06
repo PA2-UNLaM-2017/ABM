@@ -29,8 +29,8 @@ namespace AdmEdificios.Presentacion
 
                     CargaEdificio(edificio);
 
-                }   
-            }   
+                }
+            }
         }
 
 

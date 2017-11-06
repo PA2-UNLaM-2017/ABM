@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-md-12">
         <div id="sidebar" class="col-md-3 navbar-default navbar-static-side">
-            <h2>Buscar
-            </h2>
+            <h2>Buscar</h2>
             <asp:TextBox class="form-control" runat="server" ID="txtBuscaBarrio" placeholder="Ingrese barrio" />
             <asp:Label ID="lblBusquedaBarrio" ForeColor="Red" runat="server" Text="*No existe el barrio" Visible="false" />
             <br />
@@ -14,16 +13,12 @@
             <asp:RangeValidator ID="rvAnioCreacion" ControlToValidate="txtBuscaAnioCreacion" MinimumValue="1900" MaximumValue="2017"
                 Type="Integer" ForeColor="Red" ErrorMessage="*Ingrese un año entre 1900 y 2017" runat="server" />
             <br />
-
             <asp:Button ID="btnBuscar" Text="&#xf002; Buscar" class="btn btn-primary fa-with-txt" runat="server" OnClick="btnBuscar_Click" />
-
         </div>
         <div id="page-wrapper" class="col-md-9">
-            <h2>Lista de Edificios
-            </h2>
+            <h2>Lista de Edificios</h2>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <%-- VA A IR LA LISTA ACA --%>
                     <asp:GridView ID="gvListaEdificios" CssClass="table table-hover table-striped" runat="server" AutoGenerateColumns="False"
                         ForeColor="#333333" GridLines="None" CellPadding="10" CellSpacing="4" DataKeyNames="IdEdificio">
                         <AlternatingRowStyle BackColor="White" />
@@ -64,16 +59,12 @@
                         </Columns>
                     </asp:GridView>
                 </div>
-                <!-- /.table-responsive -->
             </div>
-
             <div class="form-group">
                 <asp:Label ID="lblMsjBusqueda" class="alert alert-info fa-with-txt" runat="server" Text="" Visible="false" />
             </div>
-
             <asp:Button ID="btnEdificioNuevo" Text="&#xf067; Edificio Nuevo" class="btn btn-primary fa-with-txt" PostBackUrl="~/Presentacion/Alta.aspx"
                 runat="server" />
-
         </div>
     </div>
 </asp:Content>

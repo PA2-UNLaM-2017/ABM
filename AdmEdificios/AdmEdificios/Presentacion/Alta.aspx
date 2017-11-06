@@ -16,8 +16,6 @@
                     ValidationExpression=".{1,50}" Display="Dynamic" runat="server" ForeColor="Red"
                     ValidationGroup="altaEdificio" ErrorMessage="*Máximo 50 caracteres" />
             </div>
-
-
             <div class="form-group">
                 <asp:Label ID="lblDireccion" Text="Dirección:" runat="server" for="txtDireccion" />
                 <asp:TextBox class="form-control" runat="server" ID="txtDireccion" placeholder="Escriba aquí la dirección" />
@@ -27,8 +25,6 @@
                     ValidationExpression=".{1,50}" Display="Dynamic" runat="server" ForeColor="Red"
                     ValidationGroup="altaEdificio" ErrorMessage="*Máximo 50 caracteres" />
             </div>
-
-
             <div class="row">
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblBarrioCABA" Text="Barrio CABA:" for="ddlBarrioCABA"
@@ -37,9 +33,7 @@
                     </asp:DropDownList>
                 </div>
             </div>
-
             <div class="row">
-
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblCodPostal" Text="Cod. Postal:" for="txtCodPostal"
                         runat="server" />
@@ -50,8 +44,6 @@
                         ValidationExpression=".{1,10}" Display="Dynamic" runat="server" ForeColor="Red"
                         ValidationGroup="altaEdificio" ErrorMessage="*Máximo 10 caracteres" />
                 </div>
-
-
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblCantPisos" Text="Cant. Pisos:" for="txtCantPisos"
                         runat="server" />
@@ -62,8 +54,6 @@
                         Type="Integer" ForeColor="Red" ErrorMessage="*De 1 a 100 pisos" runat="server" ValidationGroup="altaEdificio"
                         Display="Dynamic" />
                 </div>
-
-
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblCantDptos" Text="Cant. Dptos:" for="txtCantDptos"
                         runat="server" />
@@ -75,9 +65,6 @@
                         Display="Dynamic" />
                     <!-- validación requerida en TP -->
                 </div>
-
-
-
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblCocheras" Text="Cant. Cocheras:" for="txtCocheras"
                         runat="server" />
@@ -88,8 +75,6 @@
                         Type="Integer" ForeColor="Red" ErrorMessage="*Hasta 1000 cocheras" runat="server" ValidationGroup="altaEdificio"
                         Display="Dynamic" />
                 </div>
-
-
                 <div class="form-group col-md-6">
                     <asp:Label ID="lblAnioCreacion" Text="Año Creación:" for="txtAnioCreacion"
                         runat="server" />
@@ -100,16 +85,10 @@
                         Type="Integer" ForeColor="Red" ErrorMessage="*Ingrese un año entre 1900 y 2017" runat="server" ValidationGroup="altaEdificio"
                         Display="Dynamic" />
                 </div>
-
-
-
             </div>
-
             <asp:Label ID="lblAmenities" Text="Amenities:" runat="server" />
             <div class="checkbox">
-
                 <asp:CheckBoxList ID="cblAmenities" runat="server">
-
                     <asp:ListItem Value="SUM"
                         Selected="False">
                         SUM
@@ -130,10 +109,8 @@
                         Selected="False">
                         Seguridad
                     </asp:ListItem>
-
                 </asp:CheckBoxList>
             </div>
-
             <div class="form-group">
                 <asp:Label ID="lblFechaAlta" Text="Fecha de Alta:" runat="server" for="calFechaAlta" />
                 <asp:Calendar runat="server" ID="calFechaAlta" BackColor="White" BorderColor="#3366CC"
@@ -151,8 +128,6 @@
                 </asp:Calendar>
                 <asp:Label ID="lblError" ForeColor="Red" runat="server" Text=""></asp:Label>
             </div>
-
-
             <div class="form-group">
                 <asp:Label ID="lblComentarios" Text="Comentarios:" runat="server" MaxLength="200"
                     for="txtComentarios" />
@@ -164,14 +139,11 @@
                     ValidationExpression=".{1,200}" Display="Dynamic" runat="server" ForeColor="Red"
                     ValidationGroup="altaEdificio" ErrorMessage="*Máximo 200 caracteres" />
             </div>
-
-
             <div class="form-group">
                 <asp:Button ID="btnGuardar" Text="Guardar"
                     ValidationGroup="altaEdificio" runat="server" class="btn btn-success" OnClick="btnGuardarEdificio_Click" />
                 <asp:Button ID="btnCancelar" runat="server" class="btn btn-warning" Text="Cancelar" OnClick="btnCancelar_Click" />
             </div>
-
         </div>
     </div>
 </asp:Content>
