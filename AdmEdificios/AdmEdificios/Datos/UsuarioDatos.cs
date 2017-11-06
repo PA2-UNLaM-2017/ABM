@@ -13,14 +13,20 @@ namespace AdmEdificios.Datos
         // METODO PARA PODER LOGUEARSE
         public Usuarios TraerDatosUsuario(string mail)
         {
+            Usuarios user = new Usuarios();
 
-            //var user = context.Usuarios.Where(e => e.Email == mail);
-
-            var user = (from Usuarios in context.Usuarios
-                        where Usuarios.Email == mail
-                        select Usuarios).First();
+            try
+            {
+                user = (from Usuarios in context.Usuarios
+                            where Usuarios.Email == mail
+                            select Usuarios).First();
+            }
+            catch (InvalidOperationException)
+            {
+                user = null;
+            }
+            
             return user;
-       
         }
 
     }
